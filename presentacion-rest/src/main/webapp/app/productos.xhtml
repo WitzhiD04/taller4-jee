@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:pt="jakarta.faces.passthrough">
+<f:metadata>
+    <!-- carga la lista antes de dibujar la página (ver ProductosBean.cargar) -->
+    <f:viewAction action="#{productos.cargar}"/>
+</f:metadata>
+<h:head>
+    <title>Taller 4 - Productos</title>
+    <h:outputStylesheet name="estilos.css"/>
+</h:head>
+<h:body>
+    <div class="tarjeta ancha">
+        <h:form id="formSalir" styleClass="barra">
+            <span>Hola, <b>#{login.usuarioActual.nombre}</b></span>
+            <h:commandButton id="salir" value="Salir" action="#{login.salir}"/>
+        </h:form>
+
+        <h1>Productos</h1>
+
+        <h:form id="formProducto">
+            <h:messages styleClass="mensajes" infoClass="ok" errorClass="error"/>
+
+            <div class="fila">
+                <h:inputText id="nombre" value="#{productos.nombre}" pt:placeholder="Nombre"/>
+                <h:inputText id="precio" value="#{productos.precio}" pt:placeholder="Precio"
+                             converterMessage="El precio debe ser un número"/>
+                <h:commandButton id="crear" value="Agregar" action="#{productos.crear}"/>
+            </div>
+        </h:form>
+
+        <h:dataTable id="tabla" value="#{productos.lista}" var="p" styleClass="tabla">
+            <h:column>
+                <f:facet name="header">Id</f:facet>
+                #{p.id}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Nombre</f:facet>
+                #{p.nombre}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Precio</f:facet>
+                <h:outputText value="#{p.precio}">
+                    <f:convertNumber type="currency" currencySymbol="$" maxFractionDigits="0"/>
+                </h:outputText>
+            </h:column>
+        </h:dataTable>
+    </div>
+</h:body>
+</html>

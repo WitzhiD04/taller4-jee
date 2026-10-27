@@ -1,0 +1,12 @@
+# Se ejecuta UNA vez al construir la imagen Docker del servidor de Datos.
+# Registra el driver de Postgres y crea el datasource java:jboss/datasources/Taller4DS.
+embed-server --std-out=echo --server-config=standalone.xml
+
+module add --name=org.postgresql --resources=/tmp/postgresql.jar --dependencies=java.sql,jakarta.transaction.api
+
+/subsystem=datasources/jdbc-driver=postgresql:add(driver-module-name=org.postgresql,driver-class-name=org.postgresql.Driver)
+
+# Los ${env.X:valorPorDefecto} se leen cuando arranca el servidor (variables del docker-compose)
+data-source add --name=Taller4DS --jndi-name=java:jboss/datasources/Taller4DS --driver-name=postgresql --connection-url=jdbc:postgresql://${env.DB_HOST:postgres}:5432/${env.DB_NAME:taller4} --user-name=${env.DB_USER:taller4} --password=${env.DB_PASS:taller4}
+
+stop-embedded-server

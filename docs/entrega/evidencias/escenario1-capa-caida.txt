@@ -1,0 +1,8 @@
+=== E1: id de sesión y capa caída (2026-10-27T20:04:00.640Z) ===
+JSESSIONID antes del login  : BABD2BDC16C3EA9369A0F6206E7F952F
+JSESSIONID después del login: 17807E569DB8E0FA4A330C2E38A980C2
+[OK]    el id de sesión cambia al iniciar sesión
+Con la capa apagada, GET /app/productos.xhtml tardó 135.2 s
+Texto en el recuadro de mensajes: "No se pudo conectar con la capa de Lógica"
+[OK]    el usuario ve "No se pudo conectar con la capa de Lógica" en el recuadro de mensajes
+       captura: e1-10-capa-caida.png

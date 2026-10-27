@@ -1,0 +1,5 @@
+NAME                             IMAGE                          COMMAND                  SERVICE            CREATED          STATUS                    PORTS
+taller4-jee-datos-1              taller4-jee-datos              "/__cacert_entrypoin…"   datos              29 seconds ago   Up 21 seconds             8080/tcp
+taller4-jee-logica-1             taller4-jee-logica             "/__cacert_entrypoin…"   logica             28 seconds ago   Up 21 seconds             8080/tcp
+taller4-jee-postgres-1           postgres:16                    "docker-entrypoint.s…"   postgres           29 seconds ago   Up 27 seconds (healthy)   5432/tcp
+taller4-jee-presentacion-ejb-1   taller4-jee-presentacion-ejb   "catalina.sh run"        presentacion-ejb   28 seconds ago   Up 21 seconds             0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp

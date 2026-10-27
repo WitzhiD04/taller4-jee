@@ -1,0 +1,20 @@
+=== Pruebas web E1 (2026-10-27T20:03:41.742Z) ===
+[OK]    Sin sesión /app/productos.xhtml -> http://localhost:8080/presentacion/login.xhtml
+       captura: e1-01-sin-sesion-redirige.png
+[OK]    Login malo (admin/mala) -> mensaje: "Usuario o clave incorrectos"
+       captura: e1-02-login-malo.png
+[OK]    Login bueno (admin/admin123) -> http://localhost:8080/presentacion/app/productos.xhtml
+       captura: e1-03-login-bueno.png
+[OK]    Crear producto válido -> "Parlante E1" aparece en la tabla
+       captura: e1-04-crear-valido.png
+[OK]    Crear producto inválido (nombre vacío) -> mensaje: "El nombre es obligatorio"
+       captura: e1-05-crear-invalido-nombre.png
+[OK]    Crear producto inválido (precio -5) -> mensaje: "El precio debe ser mayor que cero"; filas antes=3 después=3
+       captura: e1-06-crear-invalido-precio.png
+[OK]    Crear producto con precio "abc" -> mensaje: "El precio debe ser un número"
+       captura: e1-07-crear-precio-texto.png
+[OK]    Salir -> http://localhost:8080/presentacion/login.xhtml
+       captura: e1-08-salir.png
+[OK]    Después de Salir /app/productos.xhtml -> http://localhost:8080/presentacion/login.xhtml
+       captura: e1-09-despues-de-salir.png
+=== Resultado: TODO OK ===

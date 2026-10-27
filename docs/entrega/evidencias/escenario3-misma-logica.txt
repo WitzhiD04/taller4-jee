@@ -1,0 +1,31 @@
+=== escenario3: una sola Lógica, varias puertas (2026-10-27T15:11:44-05:00) ===
+Antes: "Parlante E3" creado por la web, "Impresora" por REST (gateway) y "Cámara web" por SOAP.
+
+### 1. REST por el gateway: GET http://localhost:8000/api/productos
+HTTP/1.1 200 OK
+X-Gateway: taller4-nginx
+[{"id":1,"nombre":"Teclado","precio":85000.0},{"id":2,"nombre":"Mouse","precio":45000.0},{"id":3,"nombre":"Impresora","precio":480000.0},{"id":4,"nombre":"Impresora","precio":480000.0},{"id":5,"nombre":"Cámara web","precio":210000.0},{"id":6,"nombre":"Cámara web","precio":210000.0},{"id":7,"nombre":"Parlante E3","precio":320000.0}]
+[OK] por REST se ve lo creado por SOAP y por la web
+
+### 2. SOAP listarProductos
+<return><id>1</id><nombre>Teclado</nombre><precio>85000.0</precio></return>
+<return><id>2</id><nombre>Mouse</nombre><precio>45000.0</precio></return>
+<return><id>3</id><nombre>Impresora</nombre><precio>480000.0</precio></return>
+<return><id>4</id><nombre>Impresora</nombre><precio>480000.0</precio></return>
+<return><id>5</id><nombre>Cámara web</nombre><precio>210000.0</precio></return>
+<return><id>6</id><nombre>Cámara web</nombre><precio>210000.0</precio></return>
+<return><id>7</id><nombre>Parlante E3</nombre><precio>320000.0</precio></return>
+[OK] por SOAP se ve lo creado por REST y por la web
+
+### 3. Base de datos
+ id |   nombre    | precio 
+----+-------------+--------
+  1 | Teclado     |  85000
+  2 | Mouse       |  45000
+  3 | Impresora   | 480000
+  4 | Impresora   | 480000
+  5 | Cámara web  | 210000
+  6 | Cámara web  | 210000
+  7 | Parlante E3 | 320000
+(7 rows)
+

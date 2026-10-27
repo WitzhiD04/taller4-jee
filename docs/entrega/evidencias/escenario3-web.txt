@@ -1,0 +1,20 @@
+=== Pruebas web E3 (2026-10-27T20:11:34.394Z) ===
+[OK]    Sin sesión /app/productos.xhtml -> http://localhost:8080/presentacion/login.xhtml
+       captura: e3-01-sin-sesion-redirige.png
+[OK]    Login malo (admin/mala) -> mensaje: "Usuario o clave incorrectos"
+       captura: e3-02-login-malo.png
+[OK]    Login bueno (admin/admin123) -> http://localhost:8080/presentacion/app/productos.xhtml
+       captura: e3-03-login-bueno.png
+[OK]    Crear producto válido -> "Parlante E3" aparece en la tabla
+       captura: e3-04-crear-valido.png
+[OK]    Crear producto inválido (nombre vacío) -> mensaje: "El nombre es obligatorio"
+       captura: e3-05-crear-invalido-nombre.png
+[OK]    Crear producto inválido (precio -5) -> mensaje: "El precio debe ser mayor que cero"; filas antes=7 después=7
+       captura: e3-06-crear-invalido-precio.png
+[OK]    Crear producto con precio "abc" -> mensaje: "El precio debe ser un número"
+       captura: e3-07-crear-precio-texto.png
+[OK]    Salir -> http://localhost:8080/presentacion/login.xhtml
+       captura: e3-08-salir.png
+[OK]    Después de Salir /app/productos.xhtml -> http://localhost:8080/presentacion/login.xhtml
+       captura: e3-09-despues-de-salir.png
+=== Resultado: TODO OK ===

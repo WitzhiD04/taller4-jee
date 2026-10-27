@@ -1,0 +1,6 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://servicios.taller4.javeriana.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:listarProductos/>
+   </soapenv:Body>
+</soapenv:Envelope>

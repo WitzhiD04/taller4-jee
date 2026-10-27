@@ -1,0 +1,61 @@
+@startuml
+!pragma layout smetana
+title Escenario 2 - Vista lógica
+skinparam shadowing false
+skinparam packageStyle rectangle
+skinparam defaultFontName Arial
+
+package "Presentación" {
+  [login.xhtml] as login
+  [productos.xhtml] as prods
+  [LoginBean] as lb
+  [ProductosBean] as pb
+  [FiltroSesion] as fs
+}
+
+package "Acceso" {
+  [ClienteServicios\n(cliente REST)] as cli
+  [AutenticacionResource\n«REST»] as rauth
+  [ProductoResource\n«REST»] as rprod
+  [LocalizadorLogica\n(Service Locator)] as loc
+  [AutenticacionRemote / GestionProductosRemote\n«interfaces remotas»] as rem
+}
+
+package "Dominio" {
+  [AutenticacionBean\n«EJB Stateless»] as ab
+  [GestionProductosBean\n«EJB Stateless»] as gb
+  [Cifrado\n(SHA-256)] as cif
+  [UsuarioDTO / ProductoDTO] as dto
+}
+
+package "Infraestructura" {
+  [LocalizadorDatos\n(Service Locator)] as locd
+  [UsuarioDatosBean\n«EJB Stateless»] as udb
+  [ProductoDatosBean\n«EJB Stateless»] as pdb
+  [Usuario / Producto\n«entidad JPA»] as ent
+  database "PostgreSQL" as bd
+}
+
+login --> lb
+prods --> pb
+fs ..> prods : protege /app/*
+lb --> cli
+pb --> cli
+cli --> rauth : HTTP/JSON
+cli --> rprod : HTTP/JSON
+rauth --> loc
+rprod --> loc
+loc --> rem : EJB remoto
+rem <|.. ab
+rem <|.. gb
+ab --> cif
+ab --> locd
+gb --> locd
+ab ..> dto
+gb ..> dto
+locd --> udb : EJB remoto
+locd --> pdb : EJB remoto
+udb --> ent
+pdb --> ent
+ent --> bd : JDBC
+@enduml

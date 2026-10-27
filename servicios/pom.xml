@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>edu.javeriana.taller4</groupId>
+        <artifactId>taller4-jee</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <artifactId>servicios</artifactId>
+    <packaging>war</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>edu.javeriana.taller4</groupId>
+            <artifactId>contratos</artifactId>
+        </dependency>
+        <!-- WildFly ya trae JAX-RS (REST), JSON-B y JAX-WS (SOAP): solo se necesitan para compilar -->
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakartaee.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- SOAP (JAX-WS) es opcional en Jakarta EE 10, no viene en la API de arriba. WildFly sí lo implementa. -->
+        <dependency>
+            <groupId>jakarta.xml.ws</groupId>
+            <artifactId>jakarta.xml.ws-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>servicios</finalName>
+    </build>
+</project>

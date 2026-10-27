@@ -1,0 +1,50 @@
+=== escenario2: REST con curl (2026-10-27T15:09:38-05:00) ===
+Base: http://localhost:8081/servicios/api
+
+### Login OK   (esperado: 200)
+POST http://localhost:8081/servicios/api/auth/login
+Cuerpo: {"usuario":"admin","clave":"admin123"}
+HTTP/1.1 200 OK
+{"id":1,"nombre":"Administrador","usuario":"admin"}
+[OK]
+
+### Login clave mala   (esperado: 401)
+POST http://localhost:8081/servicios/api/auth/login
+Cuerpo: {"usuario":"admin","clave":"mala"}
+HTTP/1.1 401 Unauthorized
+{"mensaje":"Usuario o clave incorrectos"}
+[OK]
+
+### Listar productos   (esperado: 200)
+GET http://localhost:8081/servicios/api/productos
+HTTP/1.1 200 OK
+[{"id":1,"nombre":"Teclado","precio":85000.0},{"id":2,"nombre":"Mouse","precio":45000.0}]
+[OK]
+
+### Crear producto   (esperado: 201)
+POST http://localhost:8081/servicios/api/productos
+Cuerpo: {"nombre":"Impresora","precio":480000}
+HTTP/1.1 201 Created
+{"id":3,"nombre":"Impresora","precio":480000.0}
+[OK]
+
+### Crear producto inválido   (esperado: 400)
+POST http://localhost:8081/servicios/api/productos
+Cuerpo: {"nombre":"","precio":-1}
+HTTP/1.1 400 Bad Request
+{"mensaje":"El nombre es obligatorio"}
+[OK]
+
+### Crear producto con nombre de 150 caracteres   (esperado: 400)
+POST http://localhost:8081/servicios/api/productos
+Cuerpo: {"nombre":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","precio":1000}
+HTTP/1.1 400 Bad Request
+{"mensaje":"El nombre admite máximo 100 caracteres"}
+[OK]
+
+### Login sin cuerpo   (esperado: 400)
+POST http://localhost:8081/servicios/api/auth/login
+HTTP/1.1 400 Bad Request
+{"mensaje":"Falta el cuerpo {usuario, clave}"}
+[OK]
+

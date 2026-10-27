@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://servicios.taller4.javeriana.edu/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:login>
+         <usuario>admin</usuario>
+         <clave>admin123</clave>
+      </ser:login>
+   </soapenv:Body>
+</soapenv:Envelope>
