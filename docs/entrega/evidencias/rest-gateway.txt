@@ -1,0 +1,70 @@
+=== REST con curl (2026-10-30T15:11:45-05:00) ===
+Base: http://localhost:8000/api
+
+### Login OK   (esperado: 200)
+POST http://localhost:8000/api/auth/login
+Cuerpo: {"usuario":"admin","clave":"admin123"}
+HTTP/1.1 200 OK
+X-Gateway: taller4-nginx
+{"id":1,"nombre":"Administrador","usuario":"admin"}
+[OK]
+
+### Login clave mala   (esperado: 401)
+POST http://localhost:8000/api/auth/login
+Cuerpo: {"usuario":"admin","clave":"mala"}
+HTTP/1.1 401 Unauthorized
+X-Gateway: taller4-nginx
+{"mensaje":"Usuario o clave incorrectos"}
+[OK]
+
+### Listar productos   (esperado: 200)
+GET http://localhost:8000/api/productos
+HTTP/1.1 200 OK
+X-Gateway: taller4-nginx
+[{"id":1,"nombre":"Teclado","precio":85000.0},{"id":2,"nombre":"Mouse","precio":45000.0}]
+[OK]
+
+### Crear producto   (esperado: 201)
+POST http://localhost:8000/api/productos
+Cuerpo: {"nombre":"Impresora","precio":480000}
+HTTP/1.1 201 Created
+X-Gateway: taller4-nginx
+{"id":3,"nombre":"Impresora","precio":480000.0}
+[OK]
+
+### Crear producto inválido   (esperado: 400)
+POST http://localhost:8000/api/productos
+Cuerpo: {"nombre":"","precio":-1}
+HTTP/1.1 400 Bad Request
+X-Gateway: taller4-nginx
+{"mensaje":"El nombre es obligatorio"}
+[OK]
+
+### Crear producto con nombre de 150 caracteres   (esperado: 400)
+POST http://localhost:8000/api/productos
+Cuerpo: {"nombre":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","precio":1000}
+HTTP/1.1 400 Bad Request
+X-Gateway: taller4-nginx
+{"mensaje":"El nombre admite máximo 100 caracteres"}
+[OK]
+
+### Login sin cuerpo   (esperado: 400)
+POST http://localhost:8000/api/auth/login
+HTTP/1.1 400 Bad Request
+X-Gateway: taller4-nginx
+{"mensaje":"Falta el cuerpo {usuario, clave}"}
+[OK]
+
+### Ruta no expuesta por el gateway   (esperado: 404)
+GET http://localhost:8000/servicios/ProductosSoap?wsdl
+HTTP/1.1 404 Not Found
+{"mensaje":"Ruta no expuesta por el API Gateway"}
+[OK]
+
+### Límite de peticiones del gateway (limit_req 10 pet/s por IP, burst=20)
+Desde Windows los curl salen a ~12 pet/s (Docker Desktop), así que no alcanzan a superar el límite.
+60 peticiones simultáneas lanzadas dentro del contenedor del gateway a http://127.0.0.1/api/productos:
+     21 200
+     39 503 rechazada
+Log de nginx: [error] 31#31: *105 limiting requests, excess: 20.810 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+[OK] el gateway frena las que pasan del límite; esas no llegan a Servicios

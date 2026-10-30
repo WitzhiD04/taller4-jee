@@ -16,7 +16,7 @@ import javax.naming.NamingException;
  * Los MISMOS servicios que AutenticacionResource y ProductoResource, pero por SOAP.
  * WildFly genera el WSDL solo:  http://servidor:8080/servicios/ProductosSoap?wsdl
  *
- * Idea del escenario 3: una sola Lógica y varias "puertas" (REST, SOAP, web).
+ * Idea central: una sola Lógica y varias "puertas" (REST, SOAP, web).
  * Esta clase tampoco tiene reglas de negocio: solo le pasa la llamada a la Lógica.
  */
 @WebService(serviceName = "ProductosSoap", targetNamespace = "http://servicios.taller4.javeriana.edu/")

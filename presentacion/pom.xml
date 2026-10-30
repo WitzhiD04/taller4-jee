@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>edu.javeriana.taller4</groupId>
+        <artifactId>taller4-jee</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <artifactId>presentacion</artifactId>
+    <packaging>war</packaging>
+
+    <properties>
+        <jersey.version>3.1.5</jersey.version>
+    </properties>
+
+    <!--
+        Tomcat es solo un contenedor web: trae Servlet y EL, pero NO trae JSF, CDI ni EJB.
+        Por eso este .war lleva adentro:
+          - Mojarra  (implementación de JSF / Jakarta Faces)
+          - Weld     (implementación de CDI, para @Named / @SessionScoped)
+          - Jersey   (cliente JAX-RS, para llamar a la capa de Servicios por REST/JSON)
+    -->
+    <dependencies>
+        <dependency>
+            <groupId>edu.javeriana.taller4</groupId>
+            <artifactId>contratos</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>jakarta.faces</artifactId>
+            <version>4.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.weld.servlet</groupId>
+            <artifactId>weld-servlet-shaded</artifactId>
+            <version>5.1.0.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.inject</groupId>
+            <artifactId>jersey-hk2</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-binding</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+
+        <!-- Servlet/EL los pone Tomcat: solo para compilar -->
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-web-api</artifactId>
+            <version>${jakartaee.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>presentacion</finalName>
+    </build>
+</project>

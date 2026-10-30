@@ -1,0 +1,36 @@
+@startuml
+!pragma layout smetana
+title Taller 4 - Vista de implementación (módulos Maven y paquetes Java)
+skinparam shadowing false
+skinparam packageStyle folder
+skinparam defaultFontName Arial
+
+package "presentacion\n(presentacion.war · Tomcat)" as mpr {
+  rectangle "edu.javeriana.taller4.presentacion\n--\nLoginBean\nProductosBean\nFiltroSesion\nClienteServicios" as ppr
+}
+
+package "servicios\n(servicios.war · WildFly)" as mser {
+  rectangle "edu.javeriana.taller4.servicios\n--\nServiciosApp\nAutenticacionResource\nProductoResource\nProductosSoapService\nLogicaNoDisponibleMapper\nLocalizadorLogica" as pser
+}
+
+package "logica\n(logica.war · WildFly)" as mlog {
+  rectangle "edu.javeriana.taller4.logica\n--\nAutenticacionBean\nGestionProductosBean\nCifrado\nLocalizadorDatos" as plog
+}
+
+package "datos\n(datos.war · WildFly)" as mdat {
+  rectangle "edu.javeriana.taller4.datos\n--\nUsuarioDatosBean\nProductoDatosBean\nUsuario (entidad)\nProducto (entidad)\nMETA-INF/persistence.xml" as pdat
+}
+
+package "contratos\n(jar dentro de cada .war)" as mcon {
+  rectangle "edu.javeriana.taller4.contratos\n--\nAutenticacionRemote, GestionProductosRemote\nUsuarioDatosRemote, ProductoDatosRemote\nUsuarioDTO, ProductoDTO, UsuarioDatos\nLoginPeticion, ErrorRespuesta\nCredencialesInvalidasException\nDatoInvalidoException" as pcon
+}
+
+ppr --> pser : llama por REST
+pser --> plog : llama por EJB remoto
+plog --> pdat : llama por EJB remoto
+
+ppr ..> pcon : <<import>>
+pser ..> pcon : <<import>>
+plog ..> pcon : <<import>>
+pdat ..> pcon : <<import>>
+@enduml

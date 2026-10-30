@@ -9,27 +9,24 @@
     <version>1.0</version>
     <packaging>pom</packaging>
 
-    <name>Taller 4 - Arquitecturas por capas en servidores separados (escenarios 1, 2 y 3)</name>
+    <name>Taller 4 - Arquitectura por capas en servidores separados</name>
 
     <!--
-        Un "mvnw clean package" aquí construye todo: primero contratos y luego los .war.
-        Los tres escenarios usan los mismos módulos; cada escenario solo escoge cuáles levantar
-        (mira los perfiles en docker-compose.yml).
+        Un "mvnw clean package" aquí construye todo: primero contratos y luego los 4 .war
+        (uno por servidor: datos, logica, servicios y presentacion).
     -->
     <modules>
         <module>contratos</module>
         <module>datos</module>
         <module>logica</module>
-        <module>servicios</module>          <!-- escenarios 2 y 3 -->
-        <module>presentacion-ejb</module>   <!-- escenario 1: JSF llama a la Lógica por EJB remoto -->
-        <module>presentacion-rest</module>  <!-- escenarios 2 y 3: JSF llama a Servicios por REST -->
+        <module>servicios</module>
+        <module>presentacion</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>21</maven.compiler.release>
         <jakartaee.version>10.0.0</jakartaee.version>
-        <wildfly.version>38.0.1.Final</wildfly.version>
         <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
 

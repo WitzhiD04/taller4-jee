@@ -2,23 +2,22 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Build Order:
 [INFO] 
-[INFO] Taller 4 - Arquitecturas por capas en servidores separados (escenarios 1, 2 y 3) [pom]
+[INFO] Taller 4 - Arquitectura por capas en servidores separados          [pom]
 [INFO] contratos                                                          [jar]
 [INFO] datos                                                              [war]
 [INFO] logica                                                             [war]
 [INFO] servicios                                                          [war]
-[INFO] presentacion-ejb                                                   [war]
-[INFO] presentacion-rest                                                  [war]
+[INFO] presentacion                                                       [war]
 [INFO] 
 [INFO] -----------------< edu.javeriana.taller4:taller4-jee >------------------
-[INFO] Building Taller 4 - Arquitecturas por capas en servidores separados (escenarios 1, 2 y 3) 1.0 [1/7]
+[INFO] Building Taller 4 - Arquitectura por capas en servidores separados 1.0 [1/6]
 [INFO]   from pom.xml
 [INFO] --------------------------------[ pom ]---------------------------------
 [INFO] 
 [INFO] --- clean:3.2.0:clean (default-clean) @ taller4-jee ---
 [INFO] 
 [INFO] ------------------< edu.javeriana.taller4:contratos >-------------------
-[INFO] Building contratos 1.0                                             [2/7]
+[INFO] Building contratos 1.0                                             [2/6]
 [INFO]   from contratos\pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
@@ -45,7 +44,7 @@
 [INFO] Building jar: C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\contratos\target\contratos-1.0.jar
 [INFO] 
 [INFO] --------------------< edu.javeriana.taller4:datos >---------------------
-[INFO] Building datos 1.0                                                 [3/7]
+[INFO] Building datos 1.0                                                 [3/6]
 [INFO]   from datos\pom.xml
 [INFO] --------------------------------[ war ]---------------------------------
 [INFO] 
@@ -75,7 +74,7 @@
 [INFO] Building war: C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\datos\target\datos.war
 [INFO] 
 [INFO] --------------------< edu.javeriana.taller4:logica >--------------------
-[INFO] Building logica 1.0                                                [4/7]
+[INFO] Building logica 1.0                                                [4/6]
 [INFO]   from logica\pom.xml
 [INFO] --------------------------------[ war ]---------------------------------
 [INFO] 
@@ -105,7 +104,7 @@
 [INFO] Building war: C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\logica\target\logica.war
 [INFO] 
 [INFO] ------------------< edu.javeriana.taller4:servicios >-------------------
-[INFO] Building servicios 1.0                                             [5/7]
+[INFO] Building servicios 1.0                                             [5/6]
 [INFO]   from servicios\pom.xml
 [INFO] --------------------------------[ war ]---------------------------------
 [INFO] 
@@ -134,18 +133,17 @@
 [INFO] Processing war project
 [INFO] Building war: C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\servicios\target\servicios.war
 [INFO] 
-[INFO] ---------------< edu.javeriana.taller4:presentacion-ejb >---------------
-[INFO] Building presentacion-ejb 1.0                                      [6/7]
-[INFO]   from presentacion-ejb\pom.xml
+[INFO] -----------------< edu.javeriana.taller4:presentacion >-----------------
+[INFO] Building presentacion 1.0                                          [6/6]
+[INFO]   from presentacion\pom.xml
 [INFO] --------------------------------[ war ]---------------------------------
 [INFO] 
-[INFO] --- clean:3.2.0:clean (default-clean) @ presentacion-ejb ---
-[INFO] Deleting C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion-ejb\target
+[INFO] --- clean:3.2.0:clean (default-clean) @ presentacion ---
 [INFO] 
-[INFO] --- resources:3.3.1:resources (default-resources) @ presentacion-ejb ---
-[INFO] skip non existing resourceDirectory C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion-ejb\src\main\resources
+[INFO] --- resources:3.3.1:resources (default-resources) @ presentacion ---
+[INFO] skip non existing resourceDirectory C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion\src\main\resources
 [INFO] 
-[INFO] --- compiler:3.13.0:compile (default-compile) @ presentacion-ejb ---
+[INFO] --- compiler:3.13.0:compile (default-compile) @ presentacion ---
 [INFO] Recompiling the module because of changed dependency.
 [INFO] Compiling 4 source files with javac [debug release 21] to target\classes
 [INFO] Annotation processing is enabled because one or more processors were found
@@ -156,72 +154,33 @@
   Use -Xlint:-options to suppress this message.
   Use -proc:none to disable annotation processing.
 [INFO] 
-[INFO] --- resources:3.3.1:testResources (default-testResources) @ presentacion-ejb ---
-[INFO] skip non existing resourceDirectory C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion-ejb\src\test\resources
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ presentacion ---
+[INFO] skip non existing resourceDirectory C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion\src\test\resources
 [INFO] 
-[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ presentacion-ejb ---
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ presentacion ---
 [INFO] No sources to compile
 [INFO] 
-[INFO] --- surefire:3.2.2:test (default-test) @ presentacion-ejb ---
+[INFO] --- surefire:3.2.2:test (default-test) @ presentacion ---
 [INFO] No tests to run.
 [INFO] 
-[INFO] --- war:3.4.0:war (default-war) @ presentacion-ejb ---
+[INFO] --- war:3.4.0:war (default-war) @ presentacion ---
 [INFO] Packaging webapp
-[INFO] Assembling webapp [presentacion-ejb] in [C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion-ejb\target\presentacion]
+[INFO] Assembling webapp [presentacion] in [C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion\target\presentacion]
 [INFO] Processing war project
-[INFO] Copying webapp resources [C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion-ejb\src\main\webapp]
-[INFO] Building war: C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion-ejb\target\presentacion.war
-[INFO] 
-[INFO] --------------< edu.javeriana.taller4:presentacion-rest >---------------
-[INFO] Building presentacion-rest 1.0                                     [7/7]
-[INFO]   from presentacion-rest\pom.xml
-[INFO] --------------------------------[ war ]---------------------------------
-[INFO] 
-[INFO] --- clean:3.2.0:clean (default-clean) @ presentacion-rest ---
-[INFO] Deleting C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion-rest\target
-[INFO] 
-[INFO] --- resources:3.3.1:resources (default-resources) @ presentacion-rest ---
-[INFO] skip non existing resourceDirectory C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion-rest\src\main\resources
-[INFO] 
-[INFO] --- compiler:3.13.0:compile (default-compile) @ presentacion-rest ---
-[INFO] Recompiling the module because of changed dependency.
-[INFO] Compiling 4 source files with javac [debug release 21] to target\classes
-[INFO] Annotation processing is enabled because one or more processors were found
-  on the class path. A future release of javac may disable annotation processing
-  unless at least one processor is specified by name (-processor), or a search
-  path is specified (--processor-path, --processor-module-path), or annotation
-  processing is enabled explicitly (-proc:only, -proc:full).
-  Use -Xlint:-options to suppress this message.
-  Use -proc:none to disable annotation processing.
-[INFO] 
-[INFO] --- resources:3.3.1:testResources (default-testResources) @ presentacion-rest ---
-[INFO] skip non existing resourceDirectory C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion-rest\src\test\resources
-[INFO] 
-[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ presentacion-rest ---
-[INFO] No sources to compile
-[INFO] 
-[INFO] --- surefire:3.2.2:test (default-test) @ presentacion-rest ---
-[INFO] No tests to run.
-[INFO] 
-[INFO] --- war:3.4.0:war (default-war) @ presentacion-rest ---
-[INFO] Packaging webapp
-[INFO] Assembling webapp [presentacion-rest] in [C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion-rest\target\presentacion]
-[INFO] Processing war project
-[INFO] Copying webapp resources [C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion-rest\src\main\webapp]
-[INFO] Building war: C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion-rest\target\presentacion.war
+[INFO] Copying webapp resources [C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion\src\main\webapp]
+[INFO] Building war: C:\Users\AMD Ryzen 7\Documents\Universidad\7 Semestre\Arquitectura Software\taller4-jee\presentacion\target\presentacion.war
 [INFO] ------------------------------------------------------------------------
-[INFO] Reactor Summary for Taller 4 - Arquitecturas por capas en servidores separados (escenarios 1, 2 y 3) 1.0:
+[INFO] Reactor Summary for Taller 4 - Arquitectura por capas en servidores separados 1.0:
 [INFO] 
-[INFO] Taller 4 - Arquitecturas por capas en servidores separados (escenarios 1, 2 y 3) SUCCESS [  0.381 s]
-[INFO] contratos .......................................... SUCCESS [  9.189 s]
-[INFO] datos .............................................. SUCCESS [ 11.826 s]
-[INFO] logica ............................................. SUCCESS [  1.237 s]
-[INFO] servicios .......................................... SUCCESS [  1.776 s]
-[INFO] presentacion-ejb ................................... SUCCESS [ 39.554 s]
-[INFO] presentacion-rest .................................. SUCCESS [  3.530 s]
+[INFO] Taller 4 - Arquitectura por capas en servidores separados SUCCESS [  0.751 s]
+[INFO] contratos .......................................... SUCCESS [  8.357 s]
+[INFO] datos .............................................. SUCCESS [  8.293 s]
+[INFO] logica ............................................. SUCCESS [  0.629 s]
+[INFO] servicios .......................................... SUCCESS [  1.108 s]
+[INFO] presentacion ....................................... SUCCESS [  3.521 s]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  01:07 min
-[INFO] Finished at: 2026-10-27T15:01:41-05:00
+[INFO] Total time:  22.880 s
+[INFO] Finished at: 2026-10-30T14:39:12-05:00
 [INFO] ------------------------------------------------------------------------

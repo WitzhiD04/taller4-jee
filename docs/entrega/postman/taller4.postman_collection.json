@@ -1,0 +1,300 @@
+{
+  "info": {
+    "name": "Taller 4 (REST por API Gateway + SOAP)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "gateway",
+      "value": "http://localhost:8000/api"
+    },
+    {
+      "key": "soap",
+      "value": "http://localhost:8081/servicios/ProductosSoap"
+    }
+  ],
+  "item": [
+    {
+      "name": "REST (por el API Gateway)",
+      "item": [
+        {
+          "name": "Login OK (200)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{gateway}}/auth/login",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"usuario\": \"admin\",\n  \"clave\": \"admin123\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Código HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Pasó por el API Gateway (header X-Gateway)\", function () { pm.expect(pm.response.headers.get(\"X-Gateway\")).to.eql(\"taller4-nginx\"); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Login clave mala (401)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{gateway}}/auth/login",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"usuario\": \"admin\",\n  \"clave\": \"mala\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Código HTTP 401\", function () { pm.response.to.have.status(401); });",
+                  "pm.test(\"Pasó por el API Gateway (header X-Gateway)\", function () { pm.expect(pm.response.headers.get(\"X-Gateway\")).to.eql(\"taller4-nginx\"); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Listar productos (200)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{gateway}}/productos"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Código HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Pasó por el API Gateway (header X-Gateway)\", function () { pm.expect(pm.response.headers.get(\"X-Gateway\")).to.eql(\"taller4-nginx\"); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Crear producto (201)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{gateway}}/productos",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Impresora\",\n  \"precio\": 480000\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Código HTTP 201\", function () { pm.response.to.have.status(201); });",
+                  "pm.test(\"Pasó por el API Gateway (header X-Gateway)\", function () { pm.expect(pm.response.headers.get(\"X-Gateway\")).to.eql(\"taller4-nginx\"); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Crear producto inválido (400)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{gateway}}/productos",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"\",\n  \"precio\": -1\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Código HTTP 400\", function () { pm.response.to.have.status(400); });",
+                  "pm.test(\"Pasó por el API Gateway (header X-Gateway)\", function () { pm.expect(pm.response.headers.get(\"X-Gateway\")).to.eql(\"taller4-nginx\"); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SOAP (directo a Servicios)",
+      "item": [
+        {
+          "name": "WSDL",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{soap}}?wsdl"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Código HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Es un WSDL\", function () { pm.expect(pm.response.text()).to.include(\"wsdl:definitions\"); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "SOAP login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "url": "{{soap}}",
+            "body": {
+              "mode": "raw",
+              "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ser=\"http://servicios.taller4.javeriana.edu/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <ser:login>\n         <usuario>admin</usuario>\n         <clave>admin123</clave>\n      </ser:login>\n   </soapenv:Body>\n</soapenv:Envelope>\n"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Código HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Respuesta SOAP sin Fault\", function () { pm.expect(pm.response.text()).to.not.include(\"Fault\"); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "SOAP login clave mala (Fault)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "url": "{{soap}}",
+            "body": {
+              "mode": "raw",
+              "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ser=\"http://servicios.taller4.javeriana.edu/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <ser:login>\n         <usuario>admin</usuario>\n         <clave>mala</clave>\n      </ser:login>\n   </soapenv:Body>\n</soapenv:Envelope>\n"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Código HTTP 500 (SOAP Fault)\", function () { pm.response.to.have.status(500); });",
+                  "pm.test(\"Fault con el mensaje de la Lógica\", function () { pm.expect(pm.response.text()).to.include(\"Usuario o clave incorrectos\"); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "SOAP listarProductos",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "url": "{{soap}}",
+            "body": {
+              "mode": "raw",
+              "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ser=\"http://servicios.taller4.javeriana.edu/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <ser:listarProductos/>\n   </soapenv:Body>\n</soapenv:Envelope>\n"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Código HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Respuesta SOAP sin Fault\", function () { pm.expect(pm.response.text()).to.not.include(\"Fault\"); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "SOAP crearProducto",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "url": "{{soap}}",
+            "body": {
+              "mode": "raw",
+              "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ser=\"http://servicios.taller4.javeriana.edu/\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <ser:crearProducto>\n         <nombre>Cámara web</nombre>\n         <precio>210000</precio>\n      </ser:crearProducto>\n   </soapenv:Body>\n</soapenv:Envelope>\n"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Código HTTP 200\", function () { pm.response.to.have.status(200); });",
+                  "pm.test(\"Respuesta SOAP sin Fault\", function () { pm.expect(pm.response.text()).to.not.include(\"Fault\"); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

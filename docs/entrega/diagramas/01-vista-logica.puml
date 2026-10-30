@@ -1,0 +1,70 @@
+@startuml
+!pragma layout smetana
+title Taller 4 - Vista lógica
+skinparam shadowing false
+skinparam packageStyle rectangle
+skinparam defaultFontName Arial
+
+package "Presentación" {
+  [Cliente REST\n(Postman)] as crest
+  [Cliente SOAP\n(Postman / SoapUI)] as csoap
+  [login.xhtml] as login
+  [productos.xhtml] as prods
+  [LoginBean] as lb
+  [ProductosBean] as pb
+  [FiltroSesion] as fs
+}
+
+package "Acceso" {
+  [API Gateway\n(nginx)] as gw
+  [ClienteServicios\n(cliente REST)] as cli
+  [AutenticacionResource\n«REST»] as rauth
+  [ProductoResource\n«REST»] as rprod
+  [ProductosSoapService\n«SOAP»] as soap
+  [LocalizadorLogica\n(Service Locator)] as loc
+  [AutenticacionRemote / GestionProductosRemote\n«interfaces remotas»] as rem
+}
+
+package "Dominio" {
+  [AutenticacionBean\n«EJB Stateless»] as ab
+  [GestionProductosBean\n«EJB Stateless»] as gb
+  [Cifrado\n(SHA-256)] as cif
+  [UsuarioDTO / ProductoDTO] as dto
+}
+
+package "Infraestructura" {
+  [LocalizadorDatos\n(Service Locator)] as locd
+  [UsuarioDatosBean\n«EJB Stateless»] as udb
+  [ProductoDatosBean\n«EJB Stateless»] as pdb
+  [Usuario / Producto\n«entidad JPA»] as ent
+  database "PostgreSQL" as bd
+}
+
+login --> lb
+prods --> pb
+fs ..> prods : protege /app/*
+crest --> gw : HTTP/JSON
+csoap --> soap : HTTP/XML
+lb --> cli
+pb --> cli
+gw --> rauth
+gw --> rprod
+cli --> rauth
+cli --> rprod
+rauth --> loc
+rprod --> loc
+soap --> loc
+loc --> rem : EJB remoto
+rem <|.. ab
+rem <|.. gb
+ab --> cif
+ab --> locd
+gb --> locd
+ab ..> dto
+gb ..> dto
+locd --> udb : EJB remoto
+locd --> pdb : EJB remoto
+udb --> ent
+pdb --> ent
+ent --> bd : JDBC
+@enduml

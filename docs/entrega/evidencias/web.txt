@@ -1,0 +1,20 @@
+=== Pruebas web Taller 4 (2026-10-30T20:11:59.994Z) ===
+[OK]    Sin sesión /app/productos.xhtml -> http://localhost:8080/presentacion/login.xhtml
+       captura: 01-sin-sesion-redirige.png
+[OK]    Login malo (admin/mala) -> mensaje: "Usuario o clave incorrectos"
+       captura: 02-login-malo.png
+[OK]    Login bueno (admin/admin123) -> http://localhost:8080/presentacion/app/productos.xhtml
+       captura: 03-login-bueno.png
+[OK]    Crear producto válido -> "Parlante web" aparece en la tabla
+       captura: 04-crear-valido.png
+[OK]    Crear producto inválido (nombre vacío) -> mensaje: "El nombre es obligatorio"
+       captura: 05-crear-invalido-nombre.png
+[OK]    Crear producto inválido (precio -5) -> mensaje: "El precio debe ser mayor que cero"; filas antes=7 después=7
+       captura: 06-crear-invalido-precio.png
+[OK]    Crear producto con precio "abc" -> mensaje: "El precio debe ser un número"
+       captura: 07-crear-precio-texto.png
+[OK]    Salir -> http://localhost:8080/presentacion/login.xhtml
+       captura: 08-salir.png
+[OK]    Después de Salir /app/productos.xhtml -> http://localhost:8080/presentacion/login.xhtml
+       captura: 09-despues-de-salir.png
+=== Resultado: TODO OK ===

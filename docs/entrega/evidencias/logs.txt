@@ -1,0 +1,650 @@
+servicios-1  | =========================================================================
+servicios-1  | 
+servicios-1  |   JBoss Bootstrap Environment
+logica-1     | =========================================================================
+logica-1     | 
+logica-1     |   JBoss Bootstrap Environment
+datos-1      | =========================================================================
+servicios-1  | 
+servicios-1  |   JBOSS_HOME: /opt/jboss/wildfly
+servicios-1  | 
+logica-1     | 
+logica-1     |   JBOSS_HOME: /opt/jboss/wildfly
+logica-1     | 
+logica-1     |   JAVA: /opt/java/openjdk/bin/java
+logica-1     | 
+logica-1     |   JAVA_OPTS:  -Djdk.serialFilter="maxbytes=10485760;maxdepth=128;maxarray=100000;maxrefs=300000" -Xms64m -Xmx512m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true  --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED
+logica-1     | 
+postgres-1   | The files belonging to this database system will be owned by user "postgres".
+postgres-1   | This user must also own the server process.
+postgres-1   | 
+logica-1     | =========================================================================
+logica-1     | 
+logica-1     | 20:11:31,868 INFO  [org.jboss.modules] (main) JBoss Modules version 2.1.6.Final
+logica-1     | 20:11:32,602 INFO  [org.jboss.msc] (main) JBoss MSC version 1.5.6.Final
+logica-1     | 20:11:32,615 INFO  [org.jboss.threads] (main) JBoss Threads version 3.9.1
+logica-1     | 20:11:32,755 INFO  [org.jboss.as] (MSC service thread 1-4) WFLYSRV0049: WildFly 38.0.1.Final (WildFly Core 30.0.0.Final) starting
+logica-1     | 20:11:34,077 INFO  [org.wildfly.security] (Controller Boot Thread) ELY00001: WildFly Elytron version 2.7.0.Final
+postgres-1   | The database cluster will be initialized with locale "en_US.utf8".
+postgres-1   | The default database encoding has accordingly been set to "UTF8".
+postgres-1   | The default text search configuration will be set to "english".
+postgres-1   | 
+postgres-1   | Data page checksums are disabled.
+servicios-1  |   JAVA: /opt/java/openjdk/bin/java
+servicios-1  | 
+servicios-1  |   JAVA_OPTS:  -Djdk.serialFilter="maxbytes=10485760;maxdepth=128;maxarray=100000;maxrefs=300000" -Xms64m -Xmx512m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true  --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED
+servicios-1  | 
+servicios-1  | =========================================================================
+servicios-1  | 
+servicios-1  | 20:11:32,276 INFO  [org.jboss.modules] (main) JBoss Modules version 2.1.6.Final
+datos-1      | 
+datos-1      |   JBoss Bootstrap Environment
+datos-1      | 
+datos-1      |   JBOSS_HOME: /opt/jboss/wildfly
+postgres-1   | 
+postgres-1   | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+postgres-1   | creating subdirectories ... ok
+servicios-1  | 20:11:33,043 INFO  [org.jboss.msc] (main) JBoss MSC version 1.5.6.Final
+servicios-1  | 20:11:33,058 INFO  [org.jboss.threads] (main) JBoss Threads version 3.9.1
+datos-1      | 
+postgres-1   | selecting dynamic shared memory implementation ... posix
+postgres-1   | selecting default max_connections ... 100
+postgres-1   | selecting default shared_buffers ... 128MB
+postgres-1   | selecting default time zone ... Etc/UTC
+postgres-1   | creating configuration files ... ok
+postgres-1   | running bootstrap script ... ok
+postgres-1   | performing post-bootstrap initialization ... ok
+postgres-1   | syncing data to disk ... ok
+logica-1     | 20:11:35,102 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 18) WFLYDR0001: Content added at location /opt/jboss/wildfly/standalone/data/content/86/41d103091c81fdc50f03c764a505c10d9c9d07/content
+logica-1     | 20:11:35,208 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+logica-1     | 20:11:35,237 INFO  [org.xnio] (MSC service thread 1-5) XNIO version 3.8.16.Final
+datos-1      |   JAVA: /opt/java/openjdk/bin/java
+datos-1      | 
+servicios-1  | 20:11:33,213 INFO  [org.jboss.as] (MSC service thread 1-4) WFLYSRV0049: WildFly 38.0.1.Final (WildFly Core 30.0.0.Final) starting
+logica-1     | 20:11:35,245 INFO  [org.xnio.nio] (MSC service thread 1-5) XNIO NIO Implementation Version 3.8.16.Final
+logica-1     | 20:11:35,317 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0027: Starting deployment of "logica.war" (runtime-name: "logica.war")
+postgres-1   | 
+postgres-1   | 
+postgres-1   | Success. You can now start the database server using:
+postgres-1   | 
+postgres-1   |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+postgres-1   | 
+servicios-1  | 20:11:34,937 INFO  [org.wildfly.security] (Controller Boot Thread) ELY00001: WildFly Elytron version 2.7.0.Final
+servicios-1  | 20:11:36,075 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 4) WFLYDR0001: Content added at location /opt/jboss/wildfly/standalone/data/content/26/fa02e19ece4a9962cdcee8d5d098ef35590327/content
+servicios-1  | 20:11:36,128 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+servicios-1  | 20:11:36,153 INFO  [org.xnio] (MSC service thread 1-5) XNIO version 3.8.16.Final
+logica-1     | 20:11:35,321 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 56) WFLYCLINF0001: Activating Infinispan subsystem.
+logica-1     | 20:11:35,335 INFO  [org.wildfly.extension.elytron.oidc._private] (ServerService Thread Pool -- 54) WFLYOIDC0001: Activating WildFly Elytron OIDC Subsystem
+postgres-1   | initdb: warning: enabling "trust" authentication for local connections
+postgres-1   | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+servicios-1  | 20:11:36,164 INFO  [org.xnio.nio] (MSC service thread 1-5) XNIO NIO Implementation Version 3.8.16.Final
+postgres-1   | waiting for server to start....2026-10-30 20:11:26.069 UTC [48] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+postgres-1   | 2026-10-30 20:11:26.073 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1   | 2026-10-30 20:11:26.083 UTC [51] LOG:  database system was shut down at 2026-10-30 20:11:25 UTC
+logica-1     | 20:11:35,344 INFO  [org.jboss.remoting] (MSC service thread 1-6) JBoss Remoting version 5.0.31.Final
+logica-1     | 20:11:35,373 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 58) WFLYRS0016: RESTEasy version 6.2.14.Final
+datos-1      |   JAVA_OPTS:  -Djdk.serialFilter="maxbytes=10485760;maxdepth=128;maxarray=100000;maxrefs=300000" -Xms64m -Xmx512m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true  --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED
+datos-1      | 
+datos-1      | =========================================================================
+datos-1      | 
+datos-1      | 20:11:31,587 INFO  [org.jboss.modules] (main) JBoss Modules version 2.1.6.Final
+postgres-1   | 2026-10-30 20:11:26.089 UTC [48] LOG:  database system is ready to accept connections
+postgres-1   |  done
+postgres-1   | server started
+logica-1     | 20:11:35,374 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 57) WFLYIO001: Worker 'default' has auto-configured to 32 IO threads with 256 max task threads based on your 16 available processors
+logica-1     | 20:11:35,387 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 55) WFLYHEALTH0001: Activating Base Health Subsystem
+logica-1     | 20:11:35,430 INFO  [org.jboss.as.connector] (MSC service thread 1-3) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 3.0.14.Final)
+servicios-1  | 20:11:36,266 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "servicios.war" (runtime-name: "servicios.war")
+servicios-1  | 20:11:36,266 INFO  [org.jboss.remoting] (MSC service thread 1-6) JBoss Remoting version 5.0.31.Final
+datos-1      | 20:11:32,259 INFO  [org.jboss.msc] (main) JBoss MSC version 1.5.6.Final
+logica-1     | 20:11:35,431 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 63) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+logica-1     | 20:11:35,431 INFO  [org.wildfly.extension.microprofile.jwt.smallrye] (ServerService Thread Pool -- 67) WFLYJWT0001: Activating MicroProfile JWT Subsystem
+logica-1     | 20:11:35,435 INFO  [org.wildfly.extension.microprofile.config.smallrye] (ServerService Thread Pool -- 66) WFLYCONF0001: Activating MicroProfile Config Subsystem
+datos-1      | 20:11:32,271 INFO  [org.jboss.threads] (main) JBoss Threads version 3.9.1
+datos-1      | 20:11:32,421 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: WildFly 38.0.1.Final (WildFly Core 30.0.0.Final) starting
+servicios-1  | 20:11:36,283 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 57) WFLYIO001: Worker 'default' has auto-configured to 32 IO threads with 256 max task threads based on your 16 available processors
+servicios-1  | 20:11:36,285 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 56) WFLYCLINF0001: Activating Infinispan subsystem.
+servicios-1  | 20:11:36,286 INFO  [org.wildfly.extension.elytron.oidc._private] (ServerService Thread Pool -- 54) WFLYOIDC0001: Activating WildFly Elytron OIDC Subsystem
+postgres-1   | CREATE DATABASE
+postgres-1   | 
+postgres-1   | 
+datos-1      | 20:11:33,527 INFO  [org.wildfly.security] (Controller Boot Thread) ELY00001: WildFly Elytron version 2.7.0.Final
+datos-1      | 20:11:34,630 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 12) WFLYDR0001: Content added at location /opt/jboss/wildfly/standalone/data/content/16/1b51a80371084f7706e0196fab3c485f9d50e5/content
+datos-1      | 20:11:34,716 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+datos-1      | 20:11:34,745 INFO  [org.xnio] (MSC service thread 1-9) XNIO version 3.8.16.Final
+datos-1      | 20:11:34,762 INFO  [org.xnio.nio] (MSC service thread 1-9) XNIO NIO Implementation Version 3.8.16.Final
+logica-1     | 20:11:35,465 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 68) WFLYNAM0001: Activating Naming Subsystem
+logica-1     | 20:11:35,466 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 45) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 2.2)
+logica-1     | 20:11:35,508 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 75) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+datos-1      | 20:11:34,832 INFO  [org.jboss.remoting] (MSC service thread 1-7) JBoss Remoting version 5.0.31.Final
+datos-1      | 20:11:34,855 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0027: Starting deployment of "datos.war" (runtime-name: "datos.war")
+datos-1      | 20:11:34,865 INFO  [org.wildfly.extension.elytron.oidc._private] (ServerService Thread Pool -- 54) WFLYOIDC0001: Activating WildFly Elytron OIDC Subsystem
+logica-1     | 20:11:35,520 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = h2
+logica-1     | 20:11:35,555 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 65) WFLYMETRICS0001: Activating Base Metrics Subsystem
+logica-1     | 20:11:35,565 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 77) WFLYWS0002: Activating WebServices Extension
+postgres-1   | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+postgres-1   | CREATE TABLE
+postgres-1   | CREATE TABLE
+postgres-1   | INSERT 0 2
+postgres-1   | INSERT 0 2
+servicios-1  | 20:11:36,289 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 55) WFLYHEALTH0001: Activating Base Health Subsystem
+servicios-1  | 20:11:36,315 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 58) WFLYRS0016: RESTEasy version 6.2.14.Final
+datos-1      | 20:11:34,877 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 55) WFLYHEALTH0001: Activating Base Health Subsystem
+datos-1      | 20:11:34,882 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 57) WFLYIO001: Worker 'default' has auto-configured to 32 IO threads with 256 max task threads based on your 16 available processors
+postgres-1   | 
+postgres-1   | 
+datos-1      | 20:11:34,887 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 56) WFLYCLINF0001: Activating Infinispan subsystem.
+datos-1      | 20:11:34,912 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 63) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+datos-1      | 20:11:34,915 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 58) WFLYRS0016: RESTEasy version 6.2.14.Final
+postgres-1   | waiting for server to shut down...2026-10-30 20:11:26.340 UTC [48] LOG:  received fast shutdown request
+postgres-1   | .2026-10-30 20:11:26.343 UTC [48] LOG:  aborting any active transactions
+postgres-1   | 2026-10-30 20:11:26.345 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+servicios-1  | 20:11:36,315 INFO  [org.wildfly.extension.microprofile.jwt.smallrye] (ServerService Thread Pool -- 67) WFLYJWT0001: Activating MicroProfile JWT Subsystem
+servicios-1  | 20:11:36,318 INFO  [org.jboss.as.connector] (MSC service thread 1-7) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 3.0.14.Final)
+servicios-1  | 20:11:36,316 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 63) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+servicios-1  | 20:11:36,330 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 65) WFLYMETRICS0001: Activating Base Metrics Subsystem
+servicios-1  | 20:11:36,321 INFO  [org.wildfly.extension.microprofile.config.smallrye] (ServerService Thread Pool -- 66) WFLYCONF0001: Activating MicroProfile Config Subsystem
+servicios-1  | 20:11:36,346 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 45) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 2.2)
+servicios-1  | 20:11:36,347 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 68) WFLYNAM0001: Activating Naming Subsystem
+servicios-1  | 20:11:36,375 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) WFLYJCA0018: Started Driver service with driver-name = h2
+servicios-1  | 20:11:36,394 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 75) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+servicios-1  | 20:11:36,402 INFO  [org.jboss.as.naming] (MSC service thread 1-3) WFLYNAM0003: Starting Naming Service
+postgres-1   | 2026-10-30 20:11:26.345 UTC [49] LOG:  shutting down
+postgres-1   | 2026-10-30 20:11:26.348 UTC [49] LOG:  checkpoint starting: shutdown immediate
+postgres-1   | 2026-10-30 20:11:26.448 UTC [49] LOG:  checkpoint complete: wrote 942 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.023 s, sync=0.068 s, total=0.103 s; sync files=308, longest=0.004 s, average=0.001 s; distance=4304 kB, estimate=4304 kB; lsn=0/1926C98, redo lsn=0/1926C98
+postgres-1   | 2026-10-30 20:11:26.456 UTC [48] LOG:  database system is shut down
+postgres-1   |  done
+postgres-1   | server stopped
+postgres-1   | 
+datos-1      | 20:11:34,919 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 45) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 2.2)
+datos-1      | 20:11:34,929 INFO  [org.wildfly.extension.microprofile.config.smallrye] (ServerService Thread Pool -- 66) WFLYCONF0001: Activating MicroProfile Config Subsystem
+datos-1      | 20:11:34,946 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 68) WFLYNAM0001: Activating Naming Subsystem
+datos-1      | 20:11:34,959 INFO  [org.jboss.as.connector] (MSC service thread 1-4) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 3.0.14.Final)
+servicios-1  | 20:11:36,425 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-6) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+servicios-1  | 20:11:36,528 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 77) WFLYWS0002: Activating WebServices Extension
+servicios-1  | 20:11:36,595 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-7) WFLYELY00023: KeyStore file '/opt/jboss/wildfly/standalone/configuration/application.keystore' does not exist. Used blank.
+postgres-1   | PostgreSQL init process complete; ready for start up.
+postgres-1   | 
+postgres-1   | 2026-10-30 20:11:26.566 UTC [1] LOG:  starting PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+postgres-1   | 2026-10-30 20:11:26.566 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1   | 2026-10-30 20:11:26.567 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+datos-1      | 20:11:34,961 INFO  [org.wildfly.extension.microprofile.jwt.smallrye] (ServerService Thread Pool -- 67) WFLYJWT0001: Activating MicroProfile JWT Subsystem
+datos-1      | 20:11:34,986 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = h2
+postgres-1   | 2026-10-30 20:11:26.572 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1   | 2026-10-30 20:11:26.579 UTC [66] LOG:  database system was shut down at 2026-10-30 20:11:26 UTC
+postgres-1   | 2026-10-30 20:11:26.587 UTC [1] LOG:  database system is ready to accept connections
+logica-1     | 20:11:35,750 INFO  [org.jboss.as.naming] (MSC service thread 1-6) WFLYNAM0003: Starting Naming Service
+logica-1     | 20:11:35,862 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-9) WFLYUT0003: Undertow 2.3.20.Final starting
+servicios-1  | 20:11:36,633 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-3) WFLYELY01084: KeyStore /opt/jboss/wildfly/standalone/configuration/application.keystore not found, it will be auto-generated on first use with a self-signed certificate for host localhost
+servicios-1  | 20:11:36,653 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0003: Undertow 2.3.20.Final starting
+servicios-1  | 20:11:36,710 INFO  [org.jboss.as.ejb3] (MSC service thread 1-9) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 256 (per class), which is derived from thread worker pool sizing.
+logica-1     | 20:11:35,879 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-8) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+logica-1     | 20:11:35,930 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 76) WFLYUT0014: Creating file handler for path '/opt/jboss/wildfly/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+servicios-1  | 20:11:36,747 INFO  [org.jboss.as.ejb3] (MSC service thread 1-4) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 64 (per class), which is derived from the number of CPUs on this host.
+logica-1     | 20:11:35,949 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-7) WFLYELY00023: KeyStore file '/opt/jboss/wildfly/standalone/configuration/application.keystore' does not exist. Used blank.
+logica-1     | 20:11:35,953 INFO  [org.jboss.as.ejb3] (MSC service thread 1-8) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 256 (per class), which is derived from thread worker pool sizing.
+datos-1      | 20:11:35,018 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 45) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.7)
+datos-1      | 20:11:35,047 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 65) WFLYMETRICS0001: Activating Base Metrics Subsystem
+datos-1      | 20:11:35,055 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) WFLYJCA0018: Started Driver service with driver-name = postgresql
+servicios-1  | 20:11:36,755 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 76) WFLYUT0014: Creating file handler for path '/opt/jboss/wildfly/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+servicios-1  | 20:11:36,766 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0012: Started server default-server.
+logica-1     | 20:11:35,963 INFO  [org.jboss.as.ejb3] (MSC service thread 1-5) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 64 (per class), which is derived from the number of CPUs on this host.
+logica-1     | 20:11:36,010 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0012: Started server default-server.
+logica-1     | 20:11:36,016 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) Queuing requests.
+servicios-1  | 20:11:36,776 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-9) Queuing requests.
+logica-1     | 20:11:36,017 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0018: Host default-host starting
+logica-1     | 20:11:36,067 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-7) WFLYELY01084: KeyStore /opt/jboss/wildfly/standalone/configuration/application.keystore not found, it will be auto-generated on first use with a self-signed certificate for host localhost
+logica-1     | 20:11:36,106 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
+datos-1      | 20:11:35,139 INFO  [org.jboss.as.naming] (MSC service thread 1-4) WFLYNAM0003: Starting Naming Service
+datos-1      | 20:11:35,141 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-4) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+datos-1      | 20:11:35,297 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 75) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+servicios-1  | 20:11:36,777 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-9) WFLYUT0018: Host default-host starting
+servicios-1  | 20:11:36,929 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
+servicios-1  | 20:11:36,997 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+servicios-1  | 20:11:37,038 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0006: Undertow HTTPS listener https listening on 0.0.0.0:8443
+datos-1      | 20:11:35,238 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-3) WFLYELY00023: KeyStore file '/opt/jboss/wildfly/standalone/configuration/application.keystore' does not exist. Used blank.
+datos-1      | 20:11:35,374 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-8) WFLYELY01084: KeyStore /opt/jboss/wildfly/standalone/configuration/application.keystore not found, it will be auto-generated on first use with a self-signed certificate for host localhost
+datos-1      | 20:11:35,378 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 77) WFLYWS0002: Activating WebServices Extension
+datos-1      | 20:11:35,403 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 64 (per class), which is derived from the number of CPUs on this host.
+datos-1      | 20:11:35,405 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 256 (per class), which is derived from thread worker pool sizing.
+datos-1      | 20:11:35,507 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0003: Undertow 2.3.20.Final starting
+datos-1      | 20:11:35,624 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-9) WFLYUT0012: Started server default-server.
+datos-1      | 20:11:35,626 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) Queuing requests.
+datos-1      | 20:11:35,627 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0018: Host default-host starting
+logica-1     | 20:11:36,189 INFO  [org.jboss.as.ejb3] (MSC service thread 1-5) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+logica-1     | 20:11:36,252 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) WFLYDS0013: Started FileSystemDeploymentService for directory /opt/jboss/wildfly/standalone/deployments
+logica-1     | 20:11:36,306 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+logica-1     | 20:11:36,380 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTPS listener https listening on 0.0.0.0:8443
+logica-1     | 20:11:36,558 INFO  [org.jboss.ws.common.management] (MSC service thread 1-9) JBWS022052: Starting JBossWS 7.3.6.Final (Apache CXF 4.0.9.jbossorg-1) 
+logica-1     | 20:11:37,225 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) WFLYWELD0003: Processing weld deployment logica.war
+logica-1     | 20:11:37,538 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-5) HV000001: Hibernate Validator 8.0.3.Final
+datos-1      | 20:11:35,635 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 76) WFLYUT0014: Creating file handler for path '/opt/jboss/wildfly/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+datos-1      | 20:11:35,719 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
+datos-1      | 20:11:35,907 INFO  [org.jboss.as.ejb3] (MSC service thread 1-8) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+servicios-1  | 20:11:37,067 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+datos-1      | 20:11:35,920 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0006: Undertow HTTPS listener https listening on 0.0.0.0:8443
+datos-1      | 20:11:36,029 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0001: Bound data source [java:jboss/datasources/Taller4DS]
+logica-1     | 20:11:37,713 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-5) WFLYEJB0473: JNDI bindings for session bean named 'AutenticacionBean' in deployment unit 'deployment "logica.war"' are as follows:
+datos-1      | 20:11:36,037 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-9) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+datos-1      | 20:11:36,068 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-6) WFLYDS0013: Started FileSystemDeploymentService for directory /opt/jboss/wildfly/standalone/deployments
+servicios-1  | 20:11:37,074 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-9) WFLYDS0013: Started FileSystemDeploymentService for directory /opt/jboss/wildfly/standalone/deployments
+logica-1     | 
+logica-1     | 	java:global/logica/AutenticacionBean!edu.javeriana.taller4.contratos.AutenticacionRemote
+logica-1     | 	java:app/logica/AutenticacionBean!edu.javeriana.taller4.contratos.AutenticacionRemote
+logica-1     | 	java:module/AutenticacionBean!edu.javeriana.taller4.contratos.AutenticacionRemote
+logica-1     | 	java:jboss/exported/logica/AutenticacionBean!edu.javeriana.taller4.contratos.AutenticacionRemote
+logica-1     | 	ejb:/logica/AutenticacionBean!edu.javeriana.taller4.contratos.AutenticacionRemote
+datos-1      | 20:11:36,125 INFO  [org.jboss.ws.common.management] (MSC service thread 1-3) JBWS022052: Starting JBossWS 7.3.6.Final (Apache CXF 4.0.9.jbossorg-1) 
+datos-1      | 20:11:36,788 INFO  [org.jboss.as.jpa] (MSC service thread 1-3) WFLYJPA0002: Read persistence.xml for taller4PU
+datos-1      | 20:11:37,059 INFO  [org.jipijapa] (MSC service thread 1-6) JIPIORMV6020260: Second level cache enabled for datos.war#taller4PU
+logica-1     | 	java:global/logica/AutenticacionBean
+datos-1      | 20:11:37,241 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0003: Processing weld deployment datos.war
+datos-1      | 20:11:37,565 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-2) HV000001: Hibernate Validator 8.0.3.Final
+datos-1      | 20:11:37,735 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named 'ProductoDatosBean' in deployment unit 'deployment "datos.war"' are as follows:
+datos-1      | 
+logica-1     | 	java:app/logica/AutenticacionBean
+logica-1     | 	java:module/AutenticacionBean
+logica-1     | 
+logica-1     | 20:11:37,714 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-5) WFLYEJB0473: JNDI bindings for session bean named 'GestionProductosBean' in deployment unit 'deployment "logica.war"' are as follows:
+datos-1      | 	java:global/datos/ProductoDatosBean!edu.javeriana.taller4.contratos.ProductoDatosRemote
+logica-1     | 
+datos-1      | 	java:app/datos/ProductoDatosBean!edu.javeriana.taller4.contratos.ProductoDatosRemote
+logica-1     | 	java:global/logica/GestionProductosBean!edu.javeriana.taller4.contratos.GestionProductosRemote
+servicios-1  | 20:11:37,174 INFO  [org.jboss.ws.common.management] (MSC service thread 1-8) JBWS022052: Starting JBossWS 7.3.6.Final (Apache CXF 4.0.9.jbossorg-1) 
+servicios-1  | 20:11:38,343 INFO  [org.jboss.ws.cxf.metadata] (MSC service thread 1-3) JBWS024061: Adding service endpoint metadata: id=edu.javeriana.taller4.servicios.ProductosSoapService
+logica-1     | 	java:app/logica/GestionProductosBean!edu.javeriana.taller4.contratos.GestionProductosRemote
+servicios-1  |  address=http://jbossws.undefined.host:8080/servicios/ProductosSoap
+datos-1      | 	java:module/ProductoDatosBean!edu.javeriana.taller4.contratos.ProductoDatosRemote
+datos-1      | 	java:jboss/exported/datos/ProductoDatosBean!edu.javeriana.taller4.contratos.ProductoDatosRemote
+logica-1     | 	java:module/GestionProductosBean!edu.javeriana.taller4.contratos.GestionProductosRemote
+logica-1     | 	java:jboss/exported/logica/GestionProductosBean!edu.javeriana.taller4.contratos.GestionProductosRemote
+logica-1     | 	ejb:/logica/GestionProductosBean!edu.javeriana.taller4.contratos.GestionProductosRemote
+servicios-1  |  implementor=edu.javeriana.taller4.servicios.ProductosSoapService
+servicios-1  |  serviceName={http://servicios.taller4.javeriana.edu/}ProductosSoap
+servicios-1  |  portName={http://servicios.taller4.javeriana.edu/}ProductosSoapServicePort
+servicios-1  |  annotationWsdlLocation=null
+logica-1     | 	java:global/logica/GestionProductosBean
+logica-1     | 	java:app/logica/GestionProductosBean
+logica-1     | 	java:module/GestionProductosBean
+datos-1      | 	ejb:/datos/ProductoDatosBean!edu.javeriana.taller4.contratos.ProductoDatosRemote
+datos-1      | 	java:global/datos/ProductoDatosBean
+servicios-1  |  wsdlLocationOverride=null
+logica-1     | 
+logica-1     | 20:11:38,231 INFO  [org.jboss.weld.Version] (MSC service thread 1-7) WELD-000900: 5.1.6 (Final)
+logica-1     | 20:11:39,390 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 81) WFLYUT0021: Registered web context: '/logica' for server 'default-server'
+logica-1     | 20:11:39,487 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 46) WFLYSRV0010: Deployed "logica.war" (runtime-name : "logica.war")
+logica-1     | 20:11:39,526 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+logica-1     | 20:11:39,532 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+servicios-1  |  mtomEnabled=false
+servicios-1  | 20:11:39,253 INFO  [org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean] (MSC service thread 1-3) Creating Service {http://servicios.taller4.javeriana.edu/}ProductosSoap from class edu.javeriana.taller4.servicios.ProductosSoapService
+servicios-1  | 20:11:39,660 INFO  [org.apache.cxf.endpoint.ServerImpl] (MSC service thread 1-3) Setting the server's publish address to be http://jbossws.undefined.host:8080/servicios/ProductosSoap
+servicios-1  | 20:11:39,775 INFO  [org.jboss.ws.cxf.deployment] (MSC service thread 1-3) JBWS024074: WSDL published to: file:/opt/jboss/wildfly/standalone/data/wsdl/servicios.war/ProductosSoap.wsdl
+servicios-1  | 20:11:39,835 INFO  [org.jboss.as.webservices] (MSC service thread 1-9) WFLYWS0003: Starting service jboss.ws.endpoint."servicios.war"."edu.javeriana.taller4.servicios.ProductosSoapService"
+servicios-1  | 20:11:40,221 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 79) RESTEASY002225: Deploying jakarta.ws.rs.core.Application: class edu.javeriana.taller4.servicios.ServiciosApp
+servicios-1  | 20:11:40,268 INFO  [org.hibernate.validator.internal.util.Version] (ServerService Thread Pool -- 79) HV000001: Hibernate Validator 8.0.3.Final
+servicios-1  | 20:11:40,290 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 79) WFLYUT0021: Registered web context: '/servicios' for server 'default-server'
+logica-1     | 20:11:39,533 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+datos-1      | 	java:app/datos/ProductoDatosBean
+datos-1      | 	java:module/ProductoDatosBean
+datos-1      | 
+datos-1      | 20:11:37,735 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named 'UsuarioDatosBean' in deployment unit 'deployment "datos.war"' are as follows:
+datos-1      | 
+logica-1     | 20:11:39,535 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly 38.0.1.Final (WildFly Core 30.0.0.Final) started in 8120ms - Started 448 of 658 services (335 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml - Minimum feature stability level: community
+servicios-1  | 20:11:40,346 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 46) WFLYSRV0010: Deployed "servicios.war" (runtime-name : "servicios.war")
+datos-1      | 	java:global/datos/UsuarioDatosBean!edu.javeriana.taller4.contratos.UsuarioDatosRemote
+datos-1      | 	java:app/datos/UsuarioDatosBean!edu.javeriana.taller4.contratos.UsuarioDatosRemote
+datos-1      | 	java:module/UsuarioDatosBean!edu.javeriana.taller4.contratos.UsuarioDatosRemote
+datos-1      | 	java:jboss/exported/datos/UsuarioDatosBean!edu.javeriana.taller4.contratos.UsuarioDatosRemote
+datos-1      | 	ejb:/datos/UsuarioDatosBean!edu.javeriana.taller4.contratos.UsuarioDatosRemote
+servicios-1  | 20:11:40,378 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+servicios-1  | 20:11:40,384 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+servicios-1  | 20:11:40,384 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+datos-1      | 	java:global/datos/UsuarioDatosBean
+datos-1      | 	java:app/datos/UsuarioDatosBean
+logica-1     | 20:11:40,932 INFO  [org.wildfly.naming] (default task-2) WildFly Naming version 2.0.1.Final
+logica-1     | 20:11:40,948 INFO  [org.jboss.ejb.client] (default task-2) JBoss EJB Client version 5.0.8.Final
+datos-1      | 	java:module/UsuarioDatosBean
+datos-1      | 
+datos-1      | 20:11:38,158 INFO  [org.jipijapa] (MSC service thread 1-9) JIPIORMV6020260: Second level cache enabled for datos.war#taller4PU
+logica-1     | 20:11:41,276 ERROR [org.jboss.as.ejb3.invocation] (default task-2) WFLYEJB0034: Jakarta Enterprise Beans Invocation failed on component GestionProductosBean for method public abstract java.util.List edu.javeriana.taller4.contratos.GestionProductosRemote.listar(): org.jboss.ejb.client.RequestSendFailedException: EJBCLIENT000409: No more destinations are available
+datos-1      | 20:11:38,275 INFO  [org.jboss.weld.Version] (MSC service thread 1-9) WELD-000900: 5.1.6 (Final)
+servicios-1  | 20:11:40,386 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly 38.0.1.Final (WildFly Core 30.0.0.Final) started in 8618ms - Started 390 of 604 services (335 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml - Minimum feature stability level: community
+datos-1      | 20:11:38,332 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 79) ISPN000556: Starting user marshaller 'org.wildfly.clustering.cache.infinispan.marshalling.UserMarshaller'
+datos-1      | 20:11:38,993 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 79) Started hibernate cache container
+datos-1      | 20:11:39,003 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 79) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'datos.war#taller4PU'
+datos-1      | 20:11:39,040 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 79) HHH000204: Processing PersistenceUnitInfo [name: taller4PU]
+servicios-1  | 20:11:40,520 INFO  [org.wildfly.naming] (default task-2) WildFly Naming version 2.0.1.Final
+servicios-1  | 20:11:40,545 INFO  [org.jboss.ejb.client] (default task-2) JBoss EJB Client version 5.0.8.Final
+datos-1      | 20:11:39,188 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 79) HHH000412: Hibernate ORM core version 6.6.31.Final
+datos-1      | 20:11:39,624 INFO  [org.hibernate.orm.connections.pooling] (ServerService Thread Pool -- 79) HHH10001005: Database info:
+datos-1      | 	Database JDBC URL [Connecting through datasource 'org.jboss.as.connector.subsystems.datasources.WildFlyDataSource@3b6657a5']
+datos-1      | 	Database driver: undefined/unknown
+datos-1      | 	Database version: 16.15
+datos-1      | 	Autocommit mode: undefined/unknown
+datos-1      | 	Isolation level: undefined/unknown
+datos-1      | 	Minimum pool size: undefined/unknown
+servicios-1  | 20:11:53,659 INFO  [org.apache.cxf.phase.PhaseInterceptorChain] (default task-2) Application {http://servicios.taller4.javeriana.edu/}ProductosSoap#{http://servicios.taller4.javeriana.edu/}login has thrown exception, unwinding now: edu.javeriana.taller4.contratos.CredencialesInvalidasException: Usuario o clave incorrectos
+servicios-1  | 20:11:55,184 INFO  [org.apache.cxf.phase.PhaseInterceptorChain] (default task-2) Application {http://servicios.taller4.javeriana.edu/}ProductosSoap#{http://servicios.taller4.javeriana.edu/}login has thrown exception, unwinding now: edu.javeriana.taller4.contratos.CredencialesInvalidasException: Usuario o clave incorrectos
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:620)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:551)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.protocol.remote.RemotingEJBClientInterceptor.handleInvocationResult(RemotingEJBClientInterceptor.java:57)
+datos-1      | 	Maximum pool size: undefined/unknown
+servicios-1  | 20:11:56,920 INFO  [org.apache.cxf.phase.PhaseInterceptorChain] (default task-2) Application {http://servicios.taller4.javeriana.edu/}ProductosSoap#{http://servicios.taller4.javeriana.edu/}crearProducto has thrown exception, unwinding now: edu.javeriana.taller4.contratos.DatoInvalidoException: El precio debe ser mayor que cero
+servicios-1  | 20:11:57,464 INFO  [org.apache.cxf.phase.PhaseInterceptorChain] (default task-2) Application {http://servicios.taller4.javeriana.edu/}ProductosSoap#{http://servicios.taller4.javeriana.edu/}crearProducto has thrown exception, unwinding now: edu.javeriana.taller4.contratos.DatoInvalidoException: El precio debe ser mayor que cero
+servicios-1  | 20:11:58,010 INFO  [org.apache.cxf.phase.PhaseInterceptorChain] (default task-2) Application {http://servicios.taller4.javeriana.edu/}ProductosSoap#{http://servicios.taller4.javeriana.edu/}crearProducto has thrown exception, unwinding now: edu.javeriana.taller4.contratos.DatoInvalidoException: El precio debe ser mayor que cero
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:622)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:551)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.TransactionPostDiscoveryInterceptor.handleInvocationResult(TransactionPostDiscoveryInterceptor.java:148)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:622)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:551)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.DiscoveryEJBClientInterceptor.handleInvocationResult(DiscoveryEJBClientInterceptor.java:130)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:622)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:551)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.NamingEJBClientInterceptor.handleInvocationResult(NamingEJBClientInterceptor.java:87)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:622)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:551)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.AuthenticationContextEJBClientInterceptor.call(AuthenticationContextEJBClientInterceptor.java:59)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.AuthenticationContextEJBClientInterceptor.handleInvocationResult(AuthenticationContextEJBClientInterceptor.java:52)
+datos-1      | 20:11:39,633 INFO  [org.hibernate.cache.internal.RegionFactoryInitiator] (ServerService Thread Pool -- 79) HHH000025: Second-level cache region factory [org.infinispan.hibernate.cache.v62.InfinispanRegionFactory]
+datos-1      | 20:11:39,740 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 79) Envers integration enabled? : true
+datos-1      | 20:11:40,011 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 79) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'datos.war#taller4PU'
+datos-1      | 20:11:41,742 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 83) WFLYUT0021: Registered web context: '/datos' for server 'default-server'
+datos-1      | 20:11:41,819 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 46) WFLYSRV0010: Deployed "datos.war" (runtime-name : "datos.war")
+datos-1      | 20:11:41,849 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+datos-1      | 20:11:41,856 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+datos-1      | 20:11:41,856 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+datos-1      | 20:11:41,858 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly 38.0.1.Final (WildFly Core 30.0.0.Final) started in 10729ms - Started 482 of 670 services (336 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml - Minimum feature stability level: community
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:622)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:551)
+logica-1     | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.security.IdentityEJBClientInterceptor.handleInvocationResult(IdentityEJBClientInterceptor.java:41)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:622)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:551)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.TransactionInterceptor.handleInvocationResult(TransactionInterceptor.java:212)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:622)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.getResult(EJBClientInvocationContext.java:551)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBClientInvocationContext.awaitResponse(EJBClientInvocationContext.java:1003)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBInvocationHandler.invoke(EJBInvocationHandler.java:182)
+logica-1     | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.client.EJBInvocationHandler.invoke(EJBInvocationHandler.java:116)
+logica-1     | 	at deployment.logica.war/jdk.proxy16/jdk.proxy16.$Proxy43.listar(Unknown Source)
+logica-1     | 	at deployment.logica.war//edu.javeriana.taller4.logica.GestionProductosBean.listar(GestionProductosBean.java:22)
+logica-1     | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+logica-1     | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+logica-1     | 	at org.jboss.as.ee@38.0.1.Final//org.jboss.as.ee.component.ManagedReferenceMethodInterceptor.processInvocation(ManagedReferenceMethodInterceptor.java:35)
+logica-1     | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1     | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext$Invocation.proceed(InterceptorContext.java:509)
+logica-1     | 	at org.jboss.as.weld.common@38.0.1.Final//org.jboss.as.weld.interceptors.Jsr299BindingsInterceptor.delegateInterception(Jsr299BindingsInterceptor.java:62)
+logica-1     | 	at org.jboss.as.weld.common@38.0.1.Final//org.jboss.as.weld.interceptors.Jsr299BindingsInterceptor.doMethodInterception(Jsr299BindingsInterceptor.java:72)
+logica-1     | 	at org.jboss.as.weld.common@38.0.1.Final//org.jboss.as.weld.interceptors.Jsr299BindingsInterceptor.processInvocation(Jsr299BindingsInterceptor.java:85)
+logica-1     | 	at org.jboss.as.ee@38.0.1.Final//org.jboss.as.ee.component.interceptors.UserInterceptorFactory$1.processInvocation(UserInterceptorFactory.java:46)
+logica-1     | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1     | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.component.invocationmetrics.ExecutionTimeInterceptor.processInvocation(ExecutionTimeInterceptor.java:26)
+logica-1     | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1     | 	at org.jboss.as.jpa@38.0.1.Final//org.jboss.as.jpa.interceptor.SBInvocationInterceptor.processInvocation(SBInvocationInterceptor.java:30)
+logica-1     | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1     | 	at org.wildfly.concurrency@38.0.1.Final//org.jboss.as.ee.concurrent.ConcurrentContextInterceptor.processInvocation(ConcurrentContextInterceptor.java:28)
+logica-1     | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1     | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InitialInterceptor.processInvocation(InitialInterceptor.java:40)
+logica-1     | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1     | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+logica-1     | 	at org.jboss.as.ee@38.0.1.Final//org.jboss.as.ee.component.interceptors.ComponentDispatcherInterceptor.processInvocation(ComponentDispatcherInterceptor.java:35)
+logica-1     | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1     | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.component.pool.PooledInstanceInterceptor.processInvocation(PooledInstanceInterceptor.java:34)
+logica-1     | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1     | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.component.interceptors.AdditionalSetupInterceptor.processInvocation(AdditionalSetupInterceptor.java:39)
+logica-1     | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1     | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.tx.CMTTxInterceptor.invokeInNoTx(CMTTxInterceptor.java:215)
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.tx.CMTTxInterceptor.notSupported(CMTTxInterceptor.java:356)
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.tx.CMTTxInterceptor.processInvocation(CMTTxInterceptor.java:132)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext$Invocation.proceed(InterceptorContext.java:509)
+logica-1        | 	at org.jboss.weld.core@5.1.6.Final//org.jboss.weld.module.ejb.AbstractEJBRequestScopeActivationInterceptor.aroundInvoke(AbstractEJBRequestScopeActivationInterceptor.java:87)
+logica-1        | 	at org.jboss.as.weld.common@38.0.1.Final//org.jboss.as.weld.ejb.EjbRequestScopeActivationInterceptor.processInvocation(EjbRequestScopeActivationInterceptor.java:72)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+presentacion-1  | 30-Oct-2026 20:11:33.118 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.61
+presentacion-1  | 30-Oct-2026 20:11:33.133 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 6 2026 22:56:25 UTC
+presentacion-1  | 30-Oct-2026 20:11:33.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.61.0
+presentacion-1  | 30-Oct-2026 20:11:33.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+presentacion-1  | 30-Oct-2026 20:11:33.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.167.4-microsoft-standard-WSL2
+presentacion-1  | 30-Oct-2026 20:11:33.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+presentacion-1  | 30-Oct-2026 20:11:33.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+presentacion-1  | 30-Oct-2026 20:11:33.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.13+9-LTS
+presentacion-1  | 30-Oct-2026 20:11:33.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+presentacion-1  | 30-Oct-2026 20:11:33.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+presentacion-1  | 30-Oct-2026 20:11:33.134 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+presentacion-1  | 30-Oct-2026 20:11:33.157 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+presentacion-1  | 30-Oct-2026 20:11:33.158 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+presentacion-1  | 30-Oct-2026 20:11:33.158 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+presentacion-1  | 30-Oct-2026 20:11:33.158 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+presentacion-1  | 30-Oct-2026 20:11:33.158 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+presentacion-1  | 30-Oct-2026 20:11:33.158 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+presentacion-1  | 30-Oct-2026 20:11:33.158 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+presentacion-1  | 30-Oct-2026 20:11:33.158 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+presentacion-1  | 30-Oct-2026 20:11:33.159 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+presentacion-1  | 30-Oct-2026 20:11:33.159 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+presentacion-1  | 30-Oct-2026 20:11:33.159 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+presentacion-1  | 30-Oct-2026 20:11:33.159 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+presentacion-1  | 30-Oct-2026 20:11:33.159 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+presentacion-1  | 30-Oct-2026 20:11:33.159 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+presentacion-1  | 30-Oct-2026 20:11:33.159 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.component.interceptors.CurrentInvocationContextInterceptor.processInvocation(CurrentInvocationContextInterceptor.java:24)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.component.invocationmetrics.WaitTimeInterceptor.processInvocation(WaitTimeInterceptor.java:30)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.security.IdentityOutflowInterceptor.processInvocation(IdentityOutflowInterceptor.java:56)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.security.SecurityDomainInterceptor.processInvocation(SecurityDomainInterceptor.java:27)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.deployment.processors.StartupAwaitInterceptor.processInvocation(StartupAwaitInterceptor.java:27)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+presentacion-1  | 30-Oct-2026 20:11:33.170 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.16] using APR version [1.7.6].
+presentacion-1  | 30-Oct-2026 20:11:33.182 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.5.5 27 Jan 2026]
+presentacion-1  | 30-Oct-2026 20:11:33.882 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+presentacion-1  | 30-Oct-2026 20:11:33.996 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1279] milliseconds
+presentacion-1  | 30-Oct-2026 20:11:34.245 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+presentacion-1  | 30-Oct-2026 20:11:34.246 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.61]
+gateway-1       | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+gateway-1       | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.component.interceptors.ShutDownInterceptorFactory$1.processInvocation(ShutDownInterceptorFactory.java:47)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.deployment.processors.EjbSuspendInterceptor.processInvocation(EjbSuspendInterceptor.java:40)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.component.interceptors.LoggingInterceptor.processInvocation(LoggingInterceptor.java:50)
+presentacion-1  | 30-Oct-2026 20:11:34.335 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/usr/local/tomcat/webapps/presentacion.war]
+gateway-1       | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+gateway-1       | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+presentacion-1  | 30-Oct-2026 20:11:36.812 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+presentacion-1  | 30-Oct-2026 20:11:36.949 INFO [main] org.jboss.weld.environment.servlet.EnhancedListener.onStartup WELD-ENV-001008: Initialize Weld using ServletContainerInitializer
+presentacion-1  | 30-Oct-2026 20:11:36.994 INFO [main] org.jboss.weld.bootstrap.WeldStartup.<clinit> WELD-000900: 5.1.0 (Final)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1        | 	at org.jboss.as.ee@38.0.1.Final//org.jboss.as.ee.component.NamespaceContextInterceptor.processInvocation(NamespaceContextInterceptor.java:33)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.ContextClassLoaderInterceptor.processInvocation(ContextClassLoaderInterceptor.java:60)
+gateway-1       | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+gateway-1       | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.run(InterceptorContext.java:438)
+logica-1        | 	at org.wildfly.security.elytron-base@2.7.0.Final//org.wildfly.security.manager.WildFlySecurityManager.doChecked(WildFlySecurityManager.java:633)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.AccessCheckingInterceptor.processInvocation(AccessCheckingInterceptor.java:57)
+gateway-1       | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+gateway-1       | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+gateway-1       | /docker-entrypoint.sh: Configuration complete; ready for start up
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:11:45 +0000] "POST /api/auth/login HTTP/1.1" 200 51 "-" "curl/8.12.1"
+presentacion-1  | 30-Oct-2026 20:11:37.365 INFO [main] org.jboss.weld.environment.deployment.discovery.ReflectionDiscoveryStrategy.processAnnotatedDiscovery WELD-ENV-000014: Falling back to Java Reflection for bean-discovery-mode="annotated" discovery. Add org.jboss:jandex to the classpath to speed-up startup.
+presentacion-1  | 30-Oct-2026 20:11:37.524 INFO [main] org.jboss.weld.bootstrap.WeldStartup.startContainer WELD-000101: Transactional services not available. Injection of @Inject UserTransaction not available. Transactional observers will be invoked synchronously.
+presentacion-1  | 30-Oct-2026 20:11:38.036 INFO [main] org.jboss.weld.environment.tomcat.TomcatContainer.initialize WELD-ENV-001100: Tomcat 7+ detected, CDI injection will be available in Servlets, Filters and Listeners.
+presentacion-1  | 30-Oct-2026 20:11:38.625 INFO [main] com.sun.faces.config.ConfigureListener.contextInitialized Initializing Mojarra 4.0.5 for context '/presentacion'
+presentacion-1  | 30-Oct-2026 20:11:38.796 INFO [main] com.sun.faces.spi.InjectionProviderFactory.createInstance JSF1048: PostConstruct/PreDestroy annotations present.  ManagedBeans methods marked with these annotations will have said annotations processed.
+presentacion-1  | 30-Oct-2026 20:11:39.308 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/usr/local/tomcat/webapps/presentacion.war] has finished in [4,971] ms
+presentacion-1  | 30-Oct-2026 20:11:39.316 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+presentacion-1  | 30-Oct-2026 20:11:39.333 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [5331] milliseconds
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.InterceptorContext.proceed(InterceptorContext.java:422)
+logica-1        | 	at org.jboss.invocation@2.0.1.Final//org.jboss.invocation.ChainedInterceptor.processInvocation(ChainedInterceptor.java:53)
+logica-1        | 	at org.jboss.as.ee@38.0.1.Final//org.jboss.as.ee.component.ViewService$View.invoke(ViewService.java:181)
+logica-1        | 	at org.wildfly.security.elytron-base@2.7.0.Final//org.wildfly.security.auth.server.SecurityIdentity.runAsFunctionEx(SecurityIdentity.java:421)
+presentacion-1  | 30-Oct-2026 20:12:01.392 WARNING [http-nio-8080-exec-8] org.glassfish.jersey.message.internal.MessagingBinders$EnabledProvidersBinder.bindToBinder A class jakarta.activation.DataSource for a default provider MessageBodyWriter<jakarta.activation.DataSource> was not found. The provider is not available.
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:11:46 +0000] "POST /api/auth/login HTTP/1.1" 401 41 "-" "curl/8.12.1"
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:11:46 +0000] "GET /api/productos HTTP/1.1" 200 89 "-" "curl/8.12.1"
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:11:47 +0000] "POST /api/productos HTTP/1.1" 201 47 "-" "curl/8.12.1"
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:11:47 +0000] "POST /api/productos HTTP/1.1" 400 38 "-" "curl/8.12.1"
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:11:48 +0000] "POST /api/productos HTTP/1.1" 400 53 "-" "curl/8.12.1"
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:11:48 +0000] "POST /api/auth/login HTTP/1.1" 400 46 "-" "curl/8.12.1"
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:11:49 +0000] "GET /servicios/ProductosSoap?wsdl HTTP/1.1" 404 49 "-" "curl/8.12.1"
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.remote.AssociationImpl.invokeWithIdentity(AssociationImpl.java:638)
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.remote.AssociationImpl.invokeMethod(AssociationImpl.java:616)
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.remote.AssociationImpl.lambda$receiveInvocationRequest$0(AssociationImpl.java:214)
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:11:52 +0000] "POST /api/auth/login HTTP/1.1" 200 51 "-" "PostmanRuntime/7.39.1"
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:11:52 +0000] "POST /api/auth/login HTTP/1.1" 401 41 "-" "PostmanRuntime/7.39.1"
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:11:52 +0000] "GET /api/productos HTTP/1.1" 200 137 "-" "PostmanRuntime/7.39.1"
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:11:53 +0000] "POST /api/productos HTTP/1.1" 201 47 "-" "PostmanRuntime/7.39.1"
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.remote.AssociationImpl.execute(AssociationImpl.java:305)
+logica-1        | 	at org.jboss.as.ejb3@38.0.1.Final//org.jboss.as.ejb3.remote.AssociationImpl.receiveInvocationRequest(AssociationImpl.java:258)
+logica-1        | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.protocol.remote.EJBServerChannel$ReceiverImpl.handleInvocationRequest(EJBServerChannel.java:477)
+logica-1        | 	at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.protocol.remote.EJBServerChannel$ReceiverImpl.handleMessage(EJBServerChannel.java:212)
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:11:53 +0000] "POST /api/productos HTTP/1.1" 400 38 "-" "PostmanRuntime/7.39.1"
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:12:10 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "curl/8.12.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *67 limiting requests, excess: 20.950 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+logica-1        | 	at org.jboss.remoting@5.0.31.Final//org.jboss.remoting3.remote.RemoteConnectionChannel.lambda$handleMessageData$3(RemoteConnectionChannel.java:432)
+logica-1        | 	at org.jboss.remoting@5.0.31.Final//org.jboss.remoting3.EndpointImpl$TrackingExecutor.lambda$execute$0(EndpointImpl.java:993)
+logica-1        | 	at org.jboss.threads@3.9.1//org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18)
+logica-1        | 	at org.jboss.threads@3.9.1//org.jboss.threads.EnhancedQueueExecutor$Task.doRunWith(EnhancedQueueExecutor.java:2651)
+logica-1        | 	at org.jboss.threads@3.9.1//org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2630)
+logica-1        | 	at org.jboss.threads@3.9.1//org.jboss.threads.EnhancedQueueExecutor.runThreadBody(EnhancedQueueExecutor.java:1622)
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+logica-1        | 	at org.jboss.threads@3.9.1//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1589)
+logica-1        | 	at org.jboss.xnio@3.8.16.Final//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+logica-1        | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+logica-1        | 	Suppressed: jakarta.ejb.NoSuchEJBException: No such EJB: /datos/ProductoDatosBean @ remote+http://datos:8080
+logica-1        | 		at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.protocol.remote.EJBClientChannel$MethodInvocation.handleResponse(EJBClientChannel.java:1195)
+logica-1        | 		at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.protocol.remote.EJBClientChannel$MethodInvocation.handleResponse(EJBClientChannel.java:1109)
+logica-1        | 		at org.jboss.remoting@5.0.31.Final//org.jboss.remoting3.util.InvocationTracker.signalResponse(InvocationTracker.java:167)
+logica-1        | 		at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.protocol.remote.EJBClientChannel.processMessage(EJBClientChannel.java:201)
+logica-1        | 		at org.jboss.ejb-client@5.0.8.Final//org.jboss.ejb.protocol.remote.EJBClientChannel$1$1.handleMessage(EJBClientChannel.java:760)
+logica-1        | 		... 9 more
+logica-1        | 
+logica-1        | *** JBossAS process (114) received TERM signal ***
+logica-1        | 20:12:20,077 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0272: Suspending server
+logica-1        | 20:12:20,082 INFO  [org.jboss.as.ejb3] (Thread-1) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+logica-1        | 20:12:20,084 INFO  [org.jboss.as.server] (Thread-1) WFLYSRV0220: Server shutdown has been requested via an OS signal
+logica-1        | 20:12:20,094 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-9) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+logica-1        | 20:12:20,095 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 84) WFLYUT0022: Unregistered web context: '/logica' from server 'default-server'
+logica-1        | 20:12:20,101 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0019: Host default-host stopping
+logica-1        | 20:12:20,111 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+logica-1        | 20:12:20,112 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0019: Stopped Driver service with driver-name = h2
+logica-1        | 20:12:20,133 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0008: Undertow HTTPS listener https suspending
+logica-1        | 20:12:20,133 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0008: Undertow HTTP listener default suspending
+logica-1        | 20:12:20,133 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 0.0.0.0:8443
+logica-1        | 20:12:20,133 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 0.0.0.0:8080
+logica-1        | 20:12:20,135 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0004: Undertow 2.3.20.Final stopping
+logica-1        | 20:12:20,136 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0028: Stopped deployment logica.war (runtime-name: logica.war) in 46ms
+logica-1        | 20:12:20,152 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0050: WildFly 38.0.1.Final (WildFly Core 30.0.0.Final) stopped in 63ms
+logica-1        | *** JBossAS process (114) received TERM signal ***
+logica-1        | =========================================================================
+logica-1        | 
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+logica-1        |   JBoss Bootstrap Environment
+logica-1        | 
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+logica-1        |   JBOSS_HOME: /opt/jboss/wildfly
+logica-1        | 
+logica-1        |   JAVA: /opt/java/openjdk/bin/java
+logica-1        | 
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *68 limiting requests, excess: 20.940 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *69 limiting requests, excess: 20.940 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *70 limiting requests, excess: 20.930 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+logica-1        |   JAVA_OPTS:  -Djdk.serialFilter="maxbytes=10485760;maxdepth=128;maxarray=100000;maxrefs=300000" -Xms64m -Xmx512m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true  --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED
+logica-1        | 
+logica-1        | =========================================================================
+logica-1        | 
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *71 limiting requests, excess: 20.930 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *72 limiting requests, excess: 20.930 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *73 limiting requests, excess: 20.920 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *74 limiting requests, excess: 20.920 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *75 limiting requests, excess: 20.920 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *76 limiting requests, excess: 20.920 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *77 limiting requests, excess: 20.910 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *78 limiting requests, excess: 20.910 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *79 limiting requests, excess: 20.910 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *80 limiting requests, excess: 20.910 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *81 limiting requests, excess: 20.910 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *82 limiting requests, excess: 20.900 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *83 limiting requests, excess: 20.900 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *84 limiting requests, excess: 20.900 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *85 limiting requests, excess: 20.900 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *86 limiting requests, excess: 20.890 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *87 limiting requests, excess: 20.890 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *88 limiting requests, excess: 20.890 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *89 limiting requests, excess: 20.890 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *90 limiting requests, excess: 20.880 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *91 limiting requests, excess: 20.870 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *92 limiting requests, excess: 20.870 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *93 limiting requests, excess: 20.870 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *94 limiting requests, excess: 20.860 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *95 limiting requests, excess: 20.860 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *96 limiting requests, excess: 20.860 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *97 limiting requests, excess: 20.860 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *98 limiting requests, excess: 20.860 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *99 limiting requests, excess: 20.860 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *100 limiting requests, excess: 20.850 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *101 limiting requests, excess: 20.850 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *102 limiting requests, excess: 20.840 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *103 limiting requests, excess: 20.840 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *104 limiting requests, excess: 20.810 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 2026/10/30 20:12:14 [error] 31#31: *105 limiting requests, excess: 20.810 by zone "api", client: 127.0.0.1, server: , request: "GET /api/productos HTTP/1.1", host: "127.0.0.1"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 503 197 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:14 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 127.0.0.1 - - [30/Oct/2026:20:12:15 +0000] "GET /api/productos HTTP/1.1" 200 336 "-" "Wget"
+gateway-1       | 172.22.0.1 - - [30/Oct/2026:20:12:32 +0000] "GET /api/productos HTTP/1.1" 503 52 "-" "curl/8.12.1"

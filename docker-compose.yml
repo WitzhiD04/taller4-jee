@@ -1,22 +1,18 @@
-# Taller 4: los tres escenarios del tablero en un solo docker-compose.
-# Cada escenario es un "perfil": se levanta uno a la vez porque todos usan el puerto 8080.
+# Taller 4: arquitectura por capas en servidores separados.
 #
-#   Escenario 1:  Navegador -> [Tomcat: JSF] -EJB remoto-> [WildFly: Lógica] -> [WildFly: Datos] -> [Postgres]
-#   Escenario 2:  Navegador -> [Tomcat: JSF] -REST-> [WildFly: Servicios] -EJB remoto-> [Lógica] -> [Datos] -> [Postgres]
-#   Escenario 3:  Cliente REST -> [nginx: API Gateway :8000] --\
-#                 Cliente SOAP ----------------------------------> [WildFly: Servicios REST+SOAP] -> [Lógica] -> [Datos] -> [Postgres]
-#                 Navegador -> [Tomcat: JSF] -------------------/
+#   Cliente REST (Postman) --> [nginx: API Gateway :8000] --\
+#   Cliente SOAP (Postman/SoapUI) ---------------------------> [WildFly: Servicios REST+SOAP] -> [WildFly: Lógica] -> [WildFly: Datos] -> [Postgres]
+#   Navegador --> [Tomcat: JSF] ---------------------------/
 #
-# Antes:   mvnw.cmd clean package                         (genera los .war en */target)
-# Subir:   docker compose --profile escenario1 up --build (o escenario2 / escenario3)
-# Bajar:   docker compose --profile escenario1 down -v    (el mismo perfil que se subió)
+# Servicios -> Lógica -> Datos se llaman por EJB remoto (remote+http).
 #
-# Web:     http://localhost:8080/presentacion             (admin / admin123)
-# REST:    http://localhost:8081/servicios/api/...         (escenario 2)
-#          http://localhost:8000/api/...                   (escenario 3, por el API Gateway)
-# SOAP:    http://localhost:8081/servicios/ProductosSoap?wsdl   (escenario 3)
+# Antes:  mvnw.cmd clean package     (genera los .war en */target)
+# Subir:  docker compose up --build
+# Bajar:  docker compose down -v     (-v borra también la BD)
 #
-# postgres, datos y logica no tienen perfil: están en los tres escenarios.
+# Web:    http://localhost:8080/presentacion                  (admin / admin123)
+# REST:   http://localhost:8000/api/productos                 (por el API Gateway)
+# SOAP:   http://localhost:8081/servicios/ProductosSoap?wsdl  (directo a Servicios)
 
 services:
 
@@ -53,49 +49,31 @@ services:
     depends_on:
       - datos
 
-  # ---------- Escenario 1: la presentación llama directo a la Lógica (EJB remoto) ----------
-  presentacion-ejb:
-    profiles: ["escenario1"]
-    build: ./presentacion-ejb
-    environment:
-      LOGICA_URL: remote+http://logica:8080
-      LOGICA_USUARIO: ejbuser
-      LOGICA_CLAVE: ejbclave123
-    ports:
-      - "8080:8080"
-    depends_on:
-      - logica
-
-  # ---------- Escenarios 2 y 3: aparece la capa de Servicios ----------
   servicios:
-    profiles: ["escenario2", "escenario3"]
     build: ./servicios
     environment:
       LOGICA_URL: remote+http://logica:8080
       LOGICA_USUARIO: ejbuser
       LOGICA_CLAVE: ejbclave123
     ports:
-      - "8081:8080"      # esc. 2: para probar la API con Postman · esc. 3: entrada de los clientes SOAP
+      - "8081:8080"      # los clientes SOAP entran directo
     depends_on:
       - logica
 
-  presentacion-rest:
-    profiles: ["escenario2", "escenario3"]
-    build: ./presentacion-rest
-    environment:
-      SERVICIOS_URL: http://servicios:8080/servicios/api
-    ports:
-      - "8080:8080"
-    depends_on:
-      - servicios
-
-  # ---------- Escenario 3: API Gateway para los clientes REST ----------
   gateway:
-    profiles: ["escenario3"]
     image: nginx:1.27-alpine
     volumes:
       - ./gateway/nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
       - "8000:80"        # los clientes REST entran por aquí
+    depends_on:
+      - servicios
+
+  presentacion:
+    build: ./presentacion
+    environment:
+      SERVICIOS_URL: http://servicios:8080/servicios/api
+    ports:
+      - "8080:8080"
     depends_on:
       - servicios

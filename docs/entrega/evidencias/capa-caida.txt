@@ -1,0 +1,15 @@
+=== Taller 4: id de sesión y capa caída (2026-10-30T20:12:19.256Z) ===
+JSESSIONID antes del login  : D220640EC4D8D0586EB4603B09ED7FC1
+JSESSIONID después del login: 3F5E15F026FA77CBD539DE914A6C365F
+[OK]    el id de sesión cambia al iniciar sesión
+Con la capa apagada, GET /app/productos.xhtml tardó 9.1 s
+Texto en el recuadro de mensajes: "No se pudo conectar con la capa de Servicios"
+[OK]    el usuario ve "No se pudo conectar con la capa de Servicios" en el recuadro de mensajes
+       captura: 10-capa-caida.png
+
+### API con la Lógica apagada: GET http://localhost:8000/api/productos   (esperado: 503 con JSON)
+HTTP/1.1 503 Service Unavailable
+Content-Type: application/json
+X-Gateway: taller4-nginx
+{"mensaje":"La capa de Lógica no está disponible"}
+[OK]

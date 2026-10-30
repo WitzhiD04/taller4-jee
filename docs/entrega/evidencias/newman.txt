@@ -1,0 +1,77 @@
+(node:32292) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+newman
+
+Taller 4 (REST por API Gateway + SOAP)
+
+Folder REST (por el API Gateway)
+Sub-folder Login OK (200)
+  POST http://localhost:8000/api/auth/login [200 OK, 231B, 67ms]
+  Pass  Código HTTP 200
+  Pass  Pasó por el API Gateway (header X-Gateway)
+
+Sub-folder Login clave mala (401)
+  POST http://localhost:8000/api/auth/login [401 Unauthorized, 231B, 32ms]
+  Pass  Código HTTP 401
+  Pass  Pasó por el API Gateway (header X-Gateway)
+
+Sub-folder Listar productos (200)
+  GET http://localhost:8000/api/productos [200 OK, 318B, 36ms]
+  Pass  Código HTTP 200
+  Pass  Pasó por el API Gateway (header X-Gateway)
+
+Sub-folder Crear producto (201)
+  POST http://localhost:8000/api/productos [201 Created, 232B, 59ms]
+  Pass  Código HTTP 201
+  Pass  Pasó por el API Gateway (header X-Gateway)
+
+Sub-folder Crear producto inválido (400)
+  POST http://localhost:8000/api/productos [400 Bad Request, 227B, 27ms]
+  Pass  Código HTTP 400
+  Pass  Pasó por el API Gateway (header X-Gateway)
+
+Folder SOAP (directo a Servicios)
+Sub-folder WSDL
+  GET http://localhost:8081/servicios/ProductosSoap?wsdl [200 OK, 7.21kB, 123ms]
+  Pass  Código HTTP 200
+  Pass  Es un WSDL
+
+Sub-folder SOAP login
+  POST http://localhost:8081/servicios/ProductosSoap [200 OK, 420B, 129ms]
+  Pass  Código HTTP 200
+  Pass  Respuesta SOAP sin Fault
+
+Sub-folder SOAP login clave mala (Fault)
+  POST http://localhost:8081/servicios/ProductosSoap [500 Internal Server Error, 486B, 42ms]
+  Pass  Código HTTP 500 (SOAP Fault)
+  Pass  Fault con el mensaje de la Lógica
+
+Sub-folder SOAP listarProductos
+  POST http://localhost:8081/servicios/ProductosSoap [200 OK, 663B, 36ms]
+  Pass  Código HTTP 200
+  Pass  Respuesta SOAP sin Fault
+
+Sub-folder SOAP crearProducto
+  POST http://localhost:8081/servicios/ProductosSoap [200 OK, 435B, 67ms]
+  Pass  Código HTTP 200
+  Pass  Respuesta SOAP sin Fault
+
+-------------------------------------------------------------------
+|                         |          executed |            failed |
+--------------------------+-------------------+--------------------
+|              iterations |                 1 |                 0 |
+--------------------------+-------------------+--------------------
+|                requests |                10 |                 0 |
+--------------------------+-------------------+--------------------
+|            test-scripts |                10 |                 0 |
+--------------------------+-------------------+--------------------
+|      prerequest-scripts |                 0 |                 0 |
+--------------------------+-------------------+--------------------
+|              assertions |                20 |                 0 |
+-------------------------------------------------------------------
+| total run duration: 1434ms                                      |
+-------------------------------------------------------------------
+| total data received: 8.82kB (approx)                            |
+-------------------------------------------------------------------
+| average response time: 61ms [min: 27ms, max: 129ms, s.d.: 34ms] |
+-------------------------------------------------------------------
